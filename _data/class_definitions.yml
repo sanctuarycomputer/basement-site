@@ -1,0 +1,153 @@
+- title: 'Key'
+  blocks:
+    - type: 'tag_description'
+      tag: 'dynamic'
+      body: 'A variant of this class is generated for each item in a setting’s map. For example, the dynamic .p<spacing-unit> class transpiles to .p_25, .p_5, .p_75, .p1, .p2, .p3, .p4, .p6, and .p8 with the default $spacing-unit setting.'
+    - type: 'tag_description'
+      tag: 'responsive'
+      body: 'A variant of this class is generated for each breakpoint. For example the responsive flex class transpiles to .flex, .sm:flex, .md:flex, .lg:flex, and .xl:flex with the default $breakpoint setting.'
+- title: 'Class Definitions'
+  blocks:
+    - type: 'small_title'
+      title: 'Display'
+    - type: 'code_block'
+      title: '.block'
+      tag: 'responsive'
+      code: 'display: block;'
+    - type: 'code_block'
+      title: '.inline-block'
+      tag: 'responsive'
+      code: 'display: inline-block;'
+    - type: 'small_title'
+      title: 'Typography'
+    - type: 'code_block'
+      title: '.regular'
+      code: 'font-weight: normal;'
+    - type: 'code_block'
+      title: '.bold'
+      code: 'font-weight: bold;'
+    - type: 'code_block'
+      title: '.italic'
+      code: 'font-weight: italic;'
+    - type: 'code_block'
+      title: '.capitalize'
+      code: 'font-weight: capitalize;'
+    - type: 'code_block'
+      title: '.uppercase'
+      code: 'font-weight: uppercase;'
+    - type: 'code_block'
+      title: '.text-left'
+      tag: 'responsive'
+      code: 'text-align: left;'
+    - type: 'code_block'
+      title: '.text-center'
+      tag: 'responsive'
+      code: 'text-align: center;'
+    - type: 'code_block'
+      title: '.text-justify'
+      tag: 'responsive'
+      code: 'text-align: justify;'
+    - type: 'small_title'
+      title: 'Grid'
+    - type: 'code_block'
+      title: ".col-<column>"
+      tag: "dynamic"
+      code: "width: < column > / < total-columns > %;
+/* .col-3 = width: 25%; in a 12 column grid */"
+    - type: 'code_block'
+      title: ".off-<column>"
+      tag: 'dynamic'
+      code: "margin-left: <column> / <total-columns> %;
+/* .off-6 = margin-left: 75%; in an 8 column grid */"
+    - type: 'small_title'
+      title: 'Margin'
+    - type: 'code_block'
+      title: ".m<spacing-unit>"
+      tag: "dynamic"
+      code: "margin: <spacing-unit>;
+/* .m4 = margin: 4rem; with a 4rem spacing unit*/"
+    - type: 'code_block'
+      title: ".mt<spacing-unit>"
+      tag: 'dynamic'
+      code: "margin-left: <spacing-unit>;"
+    - type: 'code_block'
+      title: ".mr<spacing-unit>"
+      tag: 'dynamic'
+      code: "margin-right: <spacing-unit>;"
+    - type: 'code_block'
+      title: ".mb<spacing-unit>"
+      tag: 'dynamic'
+      code: "margin-bottom: <spacing-unit>;"
+    - type: 'code_block'
+      title: ".mx<spacing-unit>"
+      tag: 'dynamic'
+      code: "margin-right: <spacing-unit>;
+margin-left: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.my<spacing-unit>'
+      tag: 'dynamic'
+      code: "margin-top: <spacing-unit>;
+margin-bottom: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.mxn<spacing-unit>'
+      tag: 'dynamic'
+      code: "margin-left: -<spacing-unit>; margin-right: -<spacing-unit>;"
+    - type: 'small_title'
+      title: "Padding"
+    - type: 'code_block'
+      tag: 'dynamic'
+      title: ".p<spacing-unit>"
+      code: "padding: <spacing-unit>;
+/* .p2 = 2rem; with a 2rem spacing unit*/"
+    - type: 'code_block'
+      title: '.pt<spacing-unit>'
+      tag: 'dynamic'
+      code: 'padding-top: <spacing-unit>;'
+    - type: 'code_block'
+      title: '.pr<spacing-unit>'
+      tag: 'dynamic'
+      code: "padding-right: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.pb<spacing-unit>'
+      tag: 'dynamic'
+      code: "padding-bottom: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.pl<spacing-unit>'
+      tag: 'dynamic'
+      code: "padding-left: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.px<spacing-unit>'
+      tag: 'dynamic'
+      code: "padding-right: <spacing-unit>;
+padding-left: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.py<spacing-unit>'
+      tag: 'dynamic'
+      code: "padding-top: <spacing-unit>;
+padding-bottom: <spacing-unit>;"
+    - type: 'code_block'
+      title: '.pxn<spacing-unit>'
+      tag: 'dynamic'
+      code: "padding-left: -<spacing-unit>;
+padding-right: -<spacing-unit>;"
+    - type: 'small_title'
+      title: 'Color'
+    - type: 'code_block'
+      title: '.color-<color>'
+      tag: 'dynamic'
+      code: "color: <color>;
+/* .color-black = color: #000; with a ‘black’ color*/"
+    - type: 'code_block'
+      title: '.bg-color-<color>'
+      tag: 'dynamic'
+      code: "background-color: <color>;"
+    - type: 'code_block'
+      title: '.border-color-<color>'
+      tag: 'dynamic'
+      code: "border-color: <color>;"
+    - type: 'small_title'
+      title: 'Aspect Ratios'
+    - type: 'code_block'
+      title: '.aspect-<ratio>'
+      tag: 'dynamic'
+      caption: 'This class is used to constrain a child element to a designated aspect ratio. Refer to the usecases section to see it in use.'

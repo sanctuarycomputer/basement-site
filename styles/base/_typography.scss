@@ -1,0 +1,29 @@
+$font-size: (
+  'xxs': 0.50rem,
+  'xs': 0.75rem,
+  's': 0.85rem,
+  'n': 1rem,
+  'm': 1.75rem,
+  'l': 2.50rem
+);
+
+@each $name, $size in $font-size {
+  .font-size-#{$name} {
+    font-size: #{$size};
+  }
+}
+.line-height-xs {
+  line-height: 0.85rem;
+}
+.line-height-s {
+  line-height: 1.25rem;
+}
+
+// font families
+.founders-grotesk {
+  font-family: "Founders Grotesk Text Test";
+}
+
+.founders-grotesk-mono {
+  font-family: "Founders Grotesk Mono Test"
+}

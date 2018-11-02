@@ -1,0 +1,51 @@
+/*
+Spacing
+*/
+@function spacing($units) {
+  @return $units * 0.25rem;
+}
+
+$spacer: (
+  '0': spacing(0),
+  'xs': spacing(1),
+  's': spacing(2),
+  'm': spacing(4),
+  'l': spacing(8),
+  'xl': spacing(16),
+);
+
+@function spacer($spacing-name) {
+  @return map-get($spacer, $spacing-name);
+}
+
+/*
+Border Radius
+*/
+$radius: (
+  '0': spacing(0),
+  'xs': spacing(1),
+  's': spacing(2),
+  'm': spacing(4),
+  'l': spacing(8),
+  'circle': 50%,
+);
+
+@function radius($radius-name) {
+  @return map-get($radius, $radius-name);
+}
+
+/*
+ Border Sizes
+*/
+$width: (
+  'small': 1px,
+  'medium': 2px,
+  'large': 5px,
+  'xlarge': 7px,
+);
+
+@each $name, $size in $width {
+  .border-#{$name} {
+    border-width: #{$size};
+  }
+}

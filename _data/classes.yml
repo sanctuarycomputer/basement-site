@@ -1,0 +1,6 @@
+- name: ‘flex-column’
+  property: ‘flex-direction’
+  value: ‘column’
+- name: ‘flex’
+  property: ‘display’
+  value: ‘flex’

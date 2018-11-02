@@ -1,0 +1,27 @@
+- title: 'Motivation'
+  blocks:
+    - type: 'small_title'
+      title: 'SASS Utilities'
+    - type: 'light-body-text'
+      body: 'While Basement aims to provide as many composable classes as possible, we recognize that sometimes you’ll have to dive into a .scss file and get messy.'
+    - type: 'light-body-text'
+      body: 'That being said, we still wanted the developer to be able reuse the settings they’ve already defined for the Basement framework. We’ve exposed a number of utility functions that can be used in your .scss files to conveniently use these settings.'
+- title: 'Utilities'
+  blocks:
+    - type: 'small_title'
+      title: 'Color'
+    - type: 'code_block'
+      title: "color(‘<color>’)"
+      caption: 'Returns a color value from the $colors setting map.'
+      code: "color(‘blue’); /* returns #343CCC */"
+- title: 'Mixins'
+  blocks:
+    - type: 'small_title'
+      title: 'Media Queries'
+    - type: 'code_block'
+      title: '@include media(<query>-<direction>)'
+      caption: 'Generates a media query closure for the given breakpoint and direction.'
+      code: "@include media(‘lg-down’) {
+  position: absolute; }
+/* transpiles to @media (max-width: 868px) */"
+      note: "The up direction, will generate a media query for all screen widths from the given breakpoint and up. The down direction will generate a media query for all screen sizes from the next defined breakpoint and down. Because of this, the last defined breakpoint will not have a down direction."

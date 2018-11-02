@@ -1,0 +1,15 @@
+<div class="clearfix">
+  <div class="col col-3">
+    {% case include.block.tag %}
+      {% when 'dynamic' %}
+        {% include blocks/dynamic_tag.html %}
+      {% when 'responsive' %}
+        {% include blocks/responsive_tag.html %}
+    {% endcase %}
+  </div>
+  <div class="col col-9">
+    <p class="font-size-s line-height-s line-height-s mb2 color-gray">
+      {{ include.block.body | xml_escape}}
+    </p>
+  </div>
+</div>

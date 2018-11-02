@@ -1,0 +1,18 @@
+{
+  "name": "basement-site",
+  "version": "1.0.0",
+  "description": "Site for Basement CSS",
+  "main": "_build/index.html",
+  "scripts": {
+    "start": "yarn install && jekyll serve",
+    "build": "yarn install && jekyll build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basement": "https://github.com/sanctuarycomputer/basement.git",
+    "build": "^0.1.4",
+    "highlight.js": "^9.13.1"
+  }
+}
