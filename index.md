@@ -8,7 +8,7 @@ layout: default
 
   <ul class="list-reset">
     {%- for intro in site.data.introductions -%}
-      <li class="Introductions__introduction clearfix founders-grotesk color-gray pb3">
+      <li class="Introductions__introduction clearfix founders-grotesk color-gray pb3" id="{{ intro.target_id }}">
         <div class="col col-3">
           <p class="font-size-xs uppercase color-gray">
             {{ intro.title }}

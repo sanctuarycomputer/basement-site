@@ -1,7 +1,16 @@
 $colors: (
+  'white': white,
   'gray': #6A6A6A,
   'light-gray': #BBBBBB,
   'blue': #1950FF,
   'green': #05D58A,
-  'purple': #3121F2
-)
+  'purple': #3121F2,
+  'white-wash': #EEEEEE
+);
+
+
+@each $name, $color in $colors {
+  .border-#{$name} {
+    border-color: #{$color};
+  }
+}

@@ -8,37 +8,55 @@
     <div class="col col-5">
       <ul class="fixed ml2 pt2 list-reset founders-grotesk font-size-n color-gray">
         <li class="pb1">
-          <a href="/">
+          <a href="/" {% if page.url == "/" %}class="bold"{% endif %}>
             Introduction
           </a>
+          {% if page.url == "/" %}
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 my1 border-left border-medium border-white-wash">
+              {%- for section in site.data.introductions -%}
+                {% capture is_last %}
+                  {% if forloop.last %}
+                    pb0
+                  {% else %}
+                    pb1
+                  {% endif %}
+                {% endcapture %}
+                <li class="{{ is_last }}">
+                  <a href="/#{{ section.target_id }}">
+                    {{ section.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {% endif %}
         </li>
         <li class="pb1">
-          <a href="/getting-started">
+          <a href="/getting-started" {% if page.url == "/getting-started.html" %}class="bold"{% endif %}>
             Getting started
           </a>
         </li>
         <li class="pb1">
-          <a href="/settings">
+          <a href="/settings" {% if page.url == "/settings.html" %}class="bold"{% endif %}>
             Settings
           </a>
         </li>
         <li class="pb1">
-          <a href="/class-definitions">
+          <a href="/class-definitions" {% if page.url == "/class-definitions.html" %}class="bold"{% endif %}>
             Class Defintions
           </a>
         </li>
         <li class="pb1">
-          <a href="/sass-utilities">
+          <a href="/sass-utilities" {% if page.url == "/sass-utilities.html" %}class="bold"{% endif %}>
             Sass Utilities
           </a>
         </li>
         <li class="pb1">
-          <a href="/usescases">
+          <a href="/usecases" {% if page.url == "/usecases.html" %}class="bold"{% endif %}>
             Usecases
           </a>
         </li>
         <li class="pb1">
-          <a href="/github">
+          <a href="https://github.com/sanctuarycomputer/basement">
             Github
           </a>
         </li>
