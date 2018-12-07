@@ -32,5 +32,13 @@
       body: "The aspect ratio helper constrains elements to designated aspect ratios. .aspect-<ratio> classes are generated from the $aspect-ratios setting as outlined in settings#aspect-ratios."
     - type: 'light-body-text'
       body: "The use this helper, apply the .aspect-<ratio> class to a nelement. All direct descendants will be constrained to the respective aspect ratio."
+    - type: 'code_block'
+      title: 'Implementation'
+      code: "<div class=‘aspect-portrait’>
+  <div style=‘background-image: url(“dots.jpg”)’>   </div>
+</div>
+<div class=‘aspect-landscape’>
+  <div style=‘background-image: url(“stripes.jpg”)’>   </div>
+</div>"
     - type: 'code_example'
       implementation: 'aspect-ratio-helper'

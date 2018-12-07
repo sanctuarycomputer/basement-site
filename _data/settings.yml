@@ -1,0 +1,28 @@
+- title: 'Settings'
+  # not_on_nav: ''
+  blocks:
+    - type: 'small_title'
+      title: '$grid-columns'
+    - type: 'code_block'
+      title: 'Amount of columns in the grid.'
+      code: '$grid-columns: 12; /* default */'
+    - type: 'small_title'
+      title: '$colors'
+    - type: 'code_block'
+      title: 'Color map used for color-<color>, bg-<color> and border-<color> classes.'
+      code: '$colors: (
+        ‘black’: #000000,
+        ‘white’: #FFFFFF,
+        ‘blue’: #0A3862
+      );'
+    - type: 'small_title'
+      title: '$breakpoints'
+    - type: 'code_block'
+      title: 'Media query breakpoints. These will be used to prefix any responsive
+		   classes.'
+      code: '$breakpoints: (
+        ‘sm’: 640px,
+        ‘md’: 832px,
+        ‘lg’: 1024px,
+        ‘xl’: 1152px
+      );'
