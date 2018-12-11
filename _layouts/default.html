@@ -3,7 +3,7 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body data-app-container>
 
     {%- include header.html -%}
 
@@ -14,6 +14,20 @@
         </div>
       </div>
     </main>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="{{ "/assets/js/index.js" | relative_url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+      	'remove-indent': true,
+      	'left-trim': true,
+      	'right-trim': true,
+      });
+    </script>
   </body>
 </html>

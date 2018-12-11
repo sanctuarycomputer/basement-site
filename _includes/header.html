@@ -12,20 +12,29 @@
             Introduction
           </a>
           {% if page.url == "/" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 my1 border-left border-medium border-white-wash">
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
               {%- for section in site.data.introductions -%}
-                {% capture is_last %}
-                  {% if forloop.last %}
-                    pb0
-                  {% else %}
-                    pb1
-                  {% endif %}
-                {% endcapture %}
-                <li class="{{ is_last }}">
-                  <a href="/#{{ section.target_id }}">
-                    {{ section.title }}
-                  </a>
-                </li>
+                {% if section.sub_nav_link %}
+                  {% capture is_last %}
+                    {% if forloop.last %}
+                      pb0
+                    {% else %}
+                      pb_5
+                    {% endif %}
+                  {% endcapture %}
+                  {% capture is_first %}
+                    {% if forloop.first %}
+                      mt1
+                    {% else %}
+                      mt0
+                    {% endif %}
+                  {% endcapture %}
+                  <li class="{{ is_last}}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                    <a href="/#{{ section.target_id }}">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                {% endif %}
               {%- endfor -%}
             </ul>
           {% endif %}
@@ -34,26 +43,161 @@
           <a href="/getting-started" {% if page.url == "/getting-started.html" %}class="bold"{% endif %}>
             Getting started
           </a>
+          {% if page.url == "/getting-started.html" %}
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+              {%- for section in site.data.getting_started -%}
+                {% if section.sub_nav_link %}
+                  {% capture is_last %}
+                    {% if forloop.last %}
+                      pb0
+                    {% else %}
+                      pb_5
+                    {% endif %}
+                  {% endcapture %}
+                  {% capture is_first %}
+                    {% if forloop.first %}
+                      mt1
+                    {% else %}
+                      mt0
+                    {% endif %}
+                  {% endcapture %}
+                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                    <a href="/getting-started/#{{ section.target_id }}">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            </ul>
+          {% endif %}
         </li>
         <li class="pb1">
           <a href="/settings" {% if page.url == "/settings.html" %}class="bold"{% endif %}>
             Settings
           </a>
+          {% if page.url == "/settings.html" %}
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+              {%- for section in site.data.settings -%}
+                {% if section.sub_nav_link %}
+                  {% capture is_last %}
+                    {% if forloop.last %}
+                      pb0
+                    {% else %}
+                      pb_5
+                    {% endif %}
+                  {% endcapture %}
+                  {% capture is_first %}
+                    {% if forloop.first %}
+                      mt1
+                    {% else %}
+                      mt0
+                    {% endif %}
+                  {% endcapture %}
+                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                    <a href="/settings/#{{ section.target_id }}">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            </ul>
+          {% endif %}
         </li>
         <li class="pb1">
           <a href="/class-definitions" {% if page.url == "/class-definitions.html" %}class="bold"{% endif %}>
             Class Defintions
           </a>
+          {% if page.url == "/class-definitions.html" %}
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+              {%- for section in site.data.class_definitions -%}
+                {% if section.sub_nav_link %}
+                  {% capture is_last %}
+                    {% if forloop.last %}
+                      pb0
+                    {% else %}
+                      pb_5
+                    {% endif %}
+                  {% endcapture %}
+                  {% capture is_first %}
+                    {% if forloop.first %}
+                      mt1
+                    {% else %}
+                      mt0
+                    {% endif %}
+                  {% endcapture %}
+                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                    <a href="/class-definitions/#{{ section.target_id }}">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            </ul>
+          {% endif %}
         </li>
         <li class="pb1">
           <a href="/sass-utilities" {% if page.url == "/sass-utilities.html" %}class="bold"{% endif %}>
             Sass Utilities
           </a>
+          {% if page.url == "/sass-utilities.html" %}
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+              {%- for section in site.data.sass_utilities -%}
+                {% if section.sub_nav_link %}
+                  {% capture is_last %}
+                    {% if forloop.last %}
+                      pb0
+                    {% else %}
+                      pb_5
+                    {% endif %}
+                  {% endcapture %}
+                  {% capture is_first %}
+                    {% if forloop.first %}
+                      mt1
+                    {% else %}
+                      mt0
+                    {% endif %}
+                  {% endcapture %}
+                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                    <a href="/sass-utilities/#{{ section.target_id }}">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            </ul>
+          {% endif %}
         </li>
         <li class="pb1">
           <a href="/usecases" {% if page.url == "/usecases.html" %}class="bold"{% endif %}>
             Usecases
           </a>
+          {% if page.url == "/usecases.html" %}
+            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+              {%- for section in site.data.usecases -%}
+                {% if section.sub_nav_link %}
+                  {% capture is_last %}
+                    {% if forloop.last %}
+                      pb0
+                    {% else %}
+                      pb_5
+                    {% endif %}
+                  {% endcapture %}
+                  {% capture is_first %}
+                    {% if forloop.first %}
+                      mt1
+                    {% else %}
+                      mt0
+                    {% endif %}
+                  {% endcapture %}
+                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                    <a href="/usecases/#{{ section.target_id }}">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {%- endfor -%}
+            </ul>
+          {% endif %}
         </li>
         <li class="pb1">
           <a href="https://github.com/sanctuarycomputer/basement">

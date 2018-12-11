@@ -1,14 +1,20 @@
 - title: 'Expectations'
+  sub_nav_link: true
   blocks:
     - body: 'Basement CSS is not a framework; rather, a starting point. It is a collection of composable utility classes for building responsive web components. Basement is unopinionated — there are no colors, margins, Cards or Buttons defined here. It is written entirely in Sass, so all settings can be overwritten by simply defining variables in a .scss file.'
   target_id: 'introductionExpectations'
 - title: 'Philosophy'
+  sub_nav_link: true
   blocks:
     - body: 'Semantic mark up. Easy to read and modify. Only have to maintain one file. Fast to write, easy to understand. Not another language, we do not abstract the class names. Easy for developers to pick up.'
   target_id: 'introductionPhilosophy'
 - title: 'Prior Art'
+  target_id: 'prior-art'
+  sub_nav_link: true
   blocks:
     - body: 'We love Bass’ composable philosophy — and stricly obey it — but needed more flexibility. In practice, not all grids are 12 columns, breakpoints are constantly changing, and not all designers adhere to a rigid scale of margin and padding. We also stripped away any opinions regarding typography and decoration and left that up to the user to define.'
 - title: 'File Size'
+  target_id: 'file-size'
+  sub_nav_link: true
   blocks:
     - body: 'Yes, the file size is large. That’s for a reason! Use Purge CSS if it becomes an issue.'

@@ -1,4 +1,6 @@
 - title: 'Key'
+  sub_nav_link: true
+  target_id: 'key'
   blocks:
     - type: 'tag_description'
       tag: 'dynamic'
@@ -7,147 +9,211 @@
       tag: 'responsive'
       body: 'A variant of this class is generated for each breakpoint. For example the responsive flex class transpiles to .flex, .sm:flex, .md:flex, .lg:flex, and .xl:flex with the default $breakpoint setting.'
 - title: 'Class Definitions'
+  sub_nav_link: true
+  target_id: 'class-definitions'
   blocks:
     - type: 'small_title'
       title: 'Display'
     - type: 'code_block'
+      language: 'css'
       title: '.block'
       tag: 'responsive'
-      code: 'display: block;'
+      code: |
+        display: block;
     - type: 'code_block'
+      language: 'css'
       title: '.inline-block'
       tag: 'responsive'
-      code: 'display: inline-block;'
+      code: |
+        display: inline-block;
     - type: 'small_title'
       title: 'Typography'
     - type: 'code_block'
+      language: 'css'
       title: '.regular'
-      code: 'font-weight: normal;'
+      code: |
+        font-weight: normal;
     - type: 'code_block'
+      language: 'css'
       title: '.bold'
-      code: 'font-weight: bold;'
+      code: |
+        font-weight: bold;
     - type: 'code_block'
+      language: 'css'
       title: '.italic'
-      code: 'font-weight: italic;'
+      code: |
+        font-weight: italic;
     - type: 'code_block'
+      language: 'css'
       title: '.capitalize'
-      code: 'font-weight: capitalize;'
+      code: |
+        font-weight: capitalize;
     - type: 'code_block'
+      language: 'css'
       title: '.uppercase'
-      code: 'font-weight: uppercase;'
+      code: |
+        font-weight: uppercase;
     - type: 'code_block'
+      language: 'css'
       title: '.text-left'
       tag: 'responsive'
-      code: 'text-align: left;'
+      code: |
+        text-align: left;
     - type: 'code_block'
+      language: 'css'
       title: '.text-center'
       tag: 'responsive'
-      code: 'text-align: center;'
+      code: |
+        text-align: center;
     - type: 'code_block'
+      language: 'css'
       title: '.text-justify'
       tag: 'responsive'
-      code: 'text-align: justify;'
+      code: |
+        text-align: justify;
     - type: 'small_title'
       title: 'Grid'
     - type: 'code_block'
+      language: 'css'
       title: ".col-<column>"
       tag: "dynamic"
-      code: "width: < column > / < total-columns > %;
-/* .col-3 = width: 25%; in a 12 column grid */"
+      code: |
+        width: < column > / < total-columns > %;
+        /* .col-3 = width: 25%; in a 12 column grid */
     - type: 'code_block'
+      language: 'css'
       title: ".off-<column>"
       tag: 'dynamic'
-      code: "margin-left: <column> / <total-columns> %;
-/* .off-6 = margin-left: 75%; in an 8 column grid */"
+      code: |
+        margin-left: <column> / <total-columns> %;
+        /* .off-6 = margin-left: 75%; in an 8 column grid */
     - type: 'small_title'
       title: 'Margin'
     - type: 'code_block'
+      language: 'css'
       title: ".m<spacing-unit>"
       tag: "dynamic"
-      code: "margin: <spacing-unit>;
-/* .m4 = margin: 4rem; with a 4rem spacing unit*/"
+      code: |
+        margin: <spacing-unit>;
+        /* .m4 = margin: 4rem; with a 4rem spacing unit*/
     - type: 'code_block'
+      language: 'css'
       title: ".mt<spacing-unit>"
       tag: 'dynamic'
-      code: "margin-left: <spacing-unit>;"
+      code: |
+        margin-left: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: ".mr<spacing-unit>"
       tag: 'dynamic'
-      code: "margin-right: <spacing-unit>;"
+      code: |
+        margin-right: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: ".mb<spacing-unit>"
       tag: 'dynamic'
-      code: "margin-bottom: <spacing-unit>;"
+      code: |
+        margin-bottom: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: ".mx<spacing-unit>"
       tag: 'dynamic'
-      code: "margin-right: <spacing-unit>;
-margin-left: <spacing-unit>;"
+      code: |
+        margin-right: <spacing-unit>;
+        margin-left: <spacing-unit>;"
     - type: 'code_block'
+      language: 'css'
       title: '.my<spacing-unit>'
       tag: 'dynamic'
-      code: "margin-top: <spacing-unit>;
-margin-bottom: <spacing-unit>;"
+      code: |
+        margin-top: <spacing-unit>;
+        margin-bottom: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.mxn<spacing-unit>'
       tag: 'dynamic'
-      code: "margin-left: -<spacing-unit>; margin-right: -<spacing-unit>;"
+      code: |
+        margin-left: -<spacing-unit>;
+        margin-right: -<spacing-unit>;
     - type: 'small_title'
       title: "Padding"
     - type: 'code_block'
+      language: 'css'
       tag: 'dynamic'
       title: ".p<spacing-unit>"
-      code: "padding: <spacing-unit>;
-/* .p2 = 2rem; with a 2rem spacing unit*/"
+      code: |
+        padding: <spacing-unit>;
+        /* .p2 = 2rem; with a 2rem spacing unit*/
     - type: 'code_block'
+      language: 'css'
       title: '.pt<spacing-unit>'
       tag: 'dynamic'
-      code: 'padding-top: <spacing-unit>;'
+      code: |
+        padding-top: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.pr<spacing-unit>'
       tag: 'dynamic'
-      code: "padding-right: <spacing-unit>;"
+      code: |
+        padding-right: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.pb<spacing-unit>'
       tag: 'dynamic'
-      code: "padding-bottom: <spacing-unit>;"
+      code: |
+        padding-bottom: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.pl<spacing-unit>'
       tag: 'dynamic'
-      code: "padding-left: <spacing-unit>;"
+      code: |
+        padding-left: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.px<spacing-unit>'
       tag: 'dynamic'
-      code: "padding-right: <spacing-unit>;
-padding-left: <spacing-unit>;"
+      code: |
+        padding-right: <spacing-unit>;
+        padding-left: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.py<spacing-unit>'
       tag: 'dynamic'
-      code: "padding-top: <spacing-unit>;
-padding-bottom: <spacing-unit>;"
+      code: |
+        padding-top: <spacing-unit>;
+        padding-bottom: <spacing-unit>;
     - type: 'code_block'
+      language: 'css'
       title: '.pxn<spacing-unit>'
       tag: 'dynamic'
-      code: "padding-left: -<spacing-unit>;
-padding-right: -<spacing-unit>;"
+      code: |
+        padding-left: -<spacing-unit>;
+        padding-right: -<spacing-unit>;
     - type: 'small_title'
       title: 'Color'
     - type: 'code_block'
+      language: 'css'
       title: '.color-<color>'
       tag: 'dynamic'
-      code: "color: <color>;
-/* .color-black = color: #000; with a ‘black’ color*/"
+      code: |
+        color: <color>;
+        /* .color-black = color: #000; with a ‘black’ color*/
     - type: 'code_block'
+      language: 'css'
       title: '.bg-color-<color>'
       tag: 'dynamic'
-      code: "background-color: <color>;"
+      code: |
+        background-color: <color>;
     - type: 'code_block'
+      language: 'css'
       title: '.border-color-<color>'
       tag: 'dynamic'
-      code: "border-color: <color>;"
+      code: |
+        border-color: <color>;
     - type: 'small_title'
       title: 'Aspect Ratios'
     - type: 'code_block'
+      language: 'css'
       title: '.aspect-<ratio>'
       tag: 'dynamic'
       caption: 'This class is used to constrain a child element to a designated aspect ratio. Refer to the usecases section to see it in use.'

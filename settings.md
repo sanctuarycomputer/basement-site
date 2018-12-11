@@ -1,11 +1,11 @@
 ---
-title: Sass Utilities
+title: Settings
 layout: default
 ---
 <div class="pt2">
 
   <ul class="list-reset">
-    {%- for section in site.data.sass_utilities -%}
+    {%- for section in site.data.settings -%}
       <li class="clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
         <div class="col col-3">
           <p class="font-size-xs uppercase color-gray">

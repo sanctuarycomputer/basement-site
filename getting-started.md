@@ -6,7 +6,7 @@ layout: default
 
   <ul class="list-reset">
     {%- for section in site.data.getting_started -%}
-      <li class="GettingStarted__section clearfix founders-grotesk color-gray pb3">
+      <li class="GettingStarted__section clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
         <div class="col col-3">
           <p class="font-size-xs uppercase">
             {{ section.title }}

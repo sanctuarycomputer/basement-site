@@ -6,7 +6,7 @@ layout: default
 
   <ul class="list-reset">
     {%- for section in site.data.usecases -%}
-      <li class="clearfix founders-grotesk color-gray pb3">
+      <li class="clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
         <div class="col col-3">
           <p class="font-size-xs uppercase color-gray">
             {{ section.title }}

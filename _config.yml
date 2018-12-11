@@ -39,10 +39,12 @@ markdown: kramdown
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-babel
 destination: ./_build
 
 sass:
   sass_dir: styles
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

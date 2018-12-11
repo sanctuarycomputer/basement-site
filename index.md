@@ -7,15 +7,15 @@ layout: default
 <div class="Introductions Introductions__container pt2">
 
   <ul class="list-reset">
-    {%- for intro in site.data.introductions -%}
-      <li class="Introductions__introduction clearfix founders-grotesk color-gray pb3" id="{{ intro.target_id }}">
+    {%- for section in site.data.introductions -%}
+      <li class="Introductions__introduction clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
         <div class="col col-3">
           <p class="font-size-xs uppercase color-gray">
-            {{ intro.title }}
+            {{ section.title }}
           </p>
         </div>
         <div class="col col-9">
-          {%- for block in intro.blocks -%}
+          {%- for block in section.blocks -%}
               {% include blocks/block_switch.html type=block.type block=block %}
           {%- endfor -%}
         </div>
