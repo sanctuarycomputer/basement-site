@@ -16,7 +16,7 @@ class App {
   _bindEvents() {
     this.subNavItems.forEach(item => {
       item.addEventListener("click", (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         this.scrollToSection(item.getAttribute('data-sub-nav-item'))
       })
     })
@@ -34,14 +34,13 @@ class App {
 
   scrollToSection(target){
     const section = document.getElementById(target);
-
     $('html, body').animate({
       scrollTop: $(section).offset().top - '20'
     }, 250);
   }
 
   toggleSubNavItem(target) {
-    let subNavItem = Array.from(this.subNavItems).find(item => {
+    const subNavItem = Array.from(this.subNavItems).find(item => {
       return item.getAttribute('data-sub-nav-item') === target
     })
     if (subNavItem) $(subNavItem).toggleClass('bold');
