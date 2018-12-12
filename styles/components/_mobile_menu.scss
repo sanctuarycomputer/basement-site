@@ -1,0 +1,9 @@
+.MobileMenu {
+  height: 0px;
+  transition: height 0.40s ease-out;
+
+  &--opened {
+    height: 100vh;
+    transition: height 0.40s ease-in;
+  }
+}

@@ -10,13 +10,15 @@ class App {
   _init(container){
     this.app = container;
     this.subNavItems = this.app.querySelectorAll('[data-sub-nav-item]');
-    this.currentSections = this.app.querySelectorAll('[data-section]')
+    this.currentSections = this.app.querySelectorAll('[data-section]');
+    this.mobileNavIcon = this.app.querySelector('[data-mobile-nav-icon]');
+    this.mobileNav = this.app.querySelector('[data-mobile-menu]');
   }
 
   _bindEvents() {
     this.subNavItems.forEach(item => {
       item.addEventListener("click", (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         this.scrollToSection(item.getAttribute('data-sub-nav-item'))
       })
     })
@@ -30,6 +32,10 @@ class App {
         this.toggleSubNavItem(section.getAttribute('id'))
       })
     })
+
+    this.mobileNavIcon.addEventListener('click', () => {
+      this.toggleMobileMenu();
+    })
   }
 
   scrollToSection(target){
@@ -40,10 +46,14 @@ class App {
   }
 
   toggleSubNavItem(target) {
-    const subNavItem = Array.from(this.subNavItems).find(item => {
-      return item.getAttribute('data-sub-nav-item') === target
-    })
+    const subNavItem = Array
+      .from(this.subNavItems)
+      .find(item => item.getAttribute('data-sub-nav-item') === target)
     if (subNavItem) $(subNavItem).toggleClass('bold');
+  }
+
+  toggleMobileMenu() {
+    $(this.mobileNav).toggleClass('MobileMenu--opened');
   }
 }
 
