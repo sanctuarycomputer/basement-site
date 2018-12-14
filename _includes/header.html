@@ -4,26 +4,38 @@
     <div class="relative w100 px2 pt4 pb3 bg-color-white">
       <ul class="py1 list-reset founders-grotesk font-size-n color-gray">
         <li class="pb1">
-          Introduction
-        <li>
+          <a href="/" {% if page.url == "/" %}class="bold"{% endif %}>
+            Introduction
+          </a>
+        </li>
         <li class="pb1">
-          Getting Started
-        <li>
+          <a href="/" {% if page.url == "/getting-started.html" %}class="bold"{% endif %}>
+            Getting Started
+          </a>
+        </li>
         <li class="pb1">
-          Settings
-        <li>
+          <a href="/settings" {% if page.url == "/settings.html" %}class="bold"{% endif %}>
+            Settings
+          </a>
+        </li>
         <li class="pb1">
-          Class Defintions
-        <li>
+          <a href="/class-definitions" {% if page.url == "/class-definitions.html" %}class="bold"{% endif %}>
+            Class Defintions
+          </a>
+        </li>
         <li class="pb1">
-          Sass Utilities
-        <li>
+          <a href="/sass-utilities" {% if page.url == "/sass-utilities.html" %}class="bold"{% endif %}>
+            Sass Utilities
+          </a>
+        </li>
         <li class="pb1">
-          Usecases
-        <li>
+          <a href="/usecases" {% if page.url == "/usecases.html" %}class="bold"{% endif %}>
+            Usecases
+          </a>
+        </li>
         <li class="pb1">
           Github
-        <li>
+        </li>
       </ul>
     </div>
     <div class="MobileMenu__close-arrow-wrapper self-center m1 pointer" data-mobile-nav-icon>
@@ -43,10 +55,17 @@
 
 <nav class="max-width-4 mxauto pt2 px2">
   <div class="clearfix">
-    <div class="Logo__container col col-7 pt4 lg:pt2 pb2">
-      <a href="/">
-        {%- include logo.html -%}
-      </a>
+    <div class="clearfix col col-12 lg:col-7">
+      <div class="Logo__container col col-4 pt4 lg:pt2 lg:pb2">
+        <a href="/">
+          {%- include logo.html -%}
+        </a>
+      </div>
+      <div class="col col-12 lg:none">
+        <p class="founders-grotesk font-size-n color-gray mt2 bold capitalize">
+          {{ page.title }}
+        </p>
+      </div>
     </div>
     <div class="col col-5 none lg:block">
       <ul class="fixed ml2 pt2 list-reset founders-grotesk font-size-n color-gray">

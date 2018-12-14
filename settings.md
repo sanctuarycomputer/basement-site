@@ -3,7 +3,6 @@ title: Settings
 layout: default
 ---
 <div class="pt2">
-
   <ul class="list-reset">
     {%- for section in site.data.settings -%}
       <li class="clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">

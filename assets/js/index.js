@@ -59,7 +59,7 @@ class SubNav {
   toggleSubNavItem(target) {
     const subNavItems = Array.from(this.subNavItems)
     subNavItems
-      .forEach(item => $(item).removeClass('bold'))
+      .forEach(item => $(item).removeClass('bold')) // reset subnav items
     const subNavItem = subNavItems
       .find(item => item.getAttribute('data-sub-nav-item') === target);
     if (subNavItem) $(subNavItem).toggleClass('bold');
@@ -113,7 +113,6 @@ class ScrollListener {
   }
 
   updateTargetElement(target) {
-    console.log('called for target: ', target)
     subNav.toggleSubNavItem(target);
   }
 }
