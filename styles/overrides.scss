@@ -5,12 +5,16 @@ $colors: (
   'blue': #1950FF,
   'green': #05D58A,
   'purple': #3121F2,
-  'white-wash': #EEEEEE
+  'white-wash': #EEEEEE,
+  'wash-gray': #979797
 );
-
 
 @each $name, $color in $colors {
   .border-#{$name} {
     border-color: #{$color};
+  }
+
+  .fill-#{$name} {
+    fill: #{$color};
   }
 }
