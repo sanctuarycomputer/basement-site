@@ -44,9 +44,11 @@
   </div>
 
   <div class="MobileMenu__mobile-banner fixed flex flex-row justify-between px2 py1 w100 lg:none bg-color-white">
-    <div class="MobileMenu__mobile-banner__banner-icon fill-wash-gray">
-      {%- include svgs/banner.html -%}
-    </div>
+    <a href="/">
+      <div class="MobileMenu__mobile-banner__banner-icon fill-wash-gray">
+        {%- include svgs/banner.html -%}
+      </div>
+    </a>
     <div class="MobileMenu__mobile-banner__hamburger-icon pointer bg-color-white fill-wash-gray" data-mobile-nav-icon>
       {%- include svgs/nav_icon.html -%}
     </div>
@@ -55,7 +57,7 @@
 
 <nav class="max-width-4 mxauto pt2 px2">
   <div class="clearfix">
-    <div class="clearfix col col-12 lg:col-7">
+    <div class="clearfix col col-12 md:col-8 lg:col-12 lg:col-7">
       <div class="Logo__container col col-4 pt4 lg:pt2 lg:pb2">
         <a href="/">
           {%- include logo.html -%}
