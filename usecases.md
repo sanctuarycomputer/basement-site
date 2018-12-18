@@ -6,11 +6,11 @@ layout: default
 
   <ul class="list-reset">
     {%- for section in site.data.usecases -%}
-      <li class="clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
+      <li class="clearfix founders-grotesk color-gray pt2" data-section id="{{ section.target_id }}">
         <div class="col py1 col-12 lg:col-3 lg:py0">
           <p class="font-size-xs uppercase color-gray">
             {{ section.title }}
-          </p>
+        </p>
         </div>
         <div class="col col-12 lg:col-9">
           {%- for block in section.blocks -%}

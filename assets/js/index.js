@@ -52,7 +52,7 @@ class SubNav {
   scrollToSection(target) {
     const section = document.getElementById(target);
     $('html, body').animate({
-      scrollTop: $(section).offset().top - '20'
+      scrollTop: $(section).offset().top + 20
     }, 250);
   }
 
@@ -101,7 +101,7 @@ class ScrollListener {
     if (this.positionsArray) {
       const elementPosition = this.positionsArray
         .find(position =>
-          (position + this.positionMap[position].height) > scrollPosition
+          position > scrollPosition || (position + this.positionMap[position].height) > scrollPosition
         );
       const element = this.positionMap[elementPosition];
       const newTarget = element;
