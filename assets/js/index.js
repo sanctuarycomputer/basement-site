@@ -1,7 +1,7 @@
 ---
 ---
 
-// generic App class
+// Generic App Class
 class App {
   constructor(container) {
     this._init(container);
@@ -10,7 +10,6 @@ class App {
 
   _init(container) {
     this.appContainer = container;
-    // this.currentSections = this.appContainer.querySelectorAll('[data-section]');
     this.mobileNavIcon = this.appContainer.querySelectorAll('[data-mobile-nav-icon]');
     this.mobileNav = this.appContainer.querySelector('[data-mobile-menu]');
   }
@@ -24,11 +23,12 @@ class App {
   }
 
   toggleMobileMenu() {
-    $(this.mobileNav).toggleClass('MobileMenu--opened');
+    this.mobileNav.classList.toggle('MobileMenu--opened');
   }
 }
 
-// SubNav class
+// SubNav Class
+
 class SubNav {
   constructor() {
     this._init();
@@ -51,9 +51,14 @@ class SubNav {
 
   scrollToSection(target) {
     const section = document.getElementById(target);
-    $('html, body').animate({
-      scrollTop: $(section).offset().top + 20
-    }, 250);
+    const html_elem = document.querySelector('body');
+    // $('html, body').animate({
+    //   scrollTop: $(section).offset().top + 20
+    // }, 250);
+    let timer = setInterval(function() {
+      if (html_elem.scrollTop == (html_elem.offsetTop + 20) ) clearInterval(timer);
+      else html_elem.scrollTop += 2px
+    }, 20); // change by 2px every 20ms, about 50 frames per second
   }
 
   toggleSubNavItem(target) {
@@ -62,12 +67,12 @@ class SubNav {
       .forEach(item => $(item).removeClass('bold')) // reset subnav items
     const subNavItem = subNavItems
       .find(item => item.getAttribute('data-sub-nav-item') === target);
-    if (subNavItem) $(subNavItem).toggleClass('bold');
+    if (subNavItem) subNavItem.classList.toggle('bold');
   }
 }
 
 
-// ScrollListener class
+// ScrollListener Class
 class ScrollListener {
   constructor(toggleSub) {
     this.intializePositionMap();
