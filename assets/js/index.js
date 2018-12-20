@@ -53,10 +53,10 @@ class SubNav {
     // $('html, body').animate({
     //   scrollTop: $(section).offset().top + 20
     // }, 250);
-    let timer = setInterval(function() {
-      if (html_elem.scrollTop == (html_elem.offsetTop + 20) ) clearInterval(timer);
-      else html_elem.scrollTop += 2px
-    }, 20); // change by 2px every 20ms, about 50 frames per second
+    // let timer = setInterval(function() {
+    //   if (html_elem.scrollTop == (html_elem.offsetTop + 20) ) clearInterval(timer);
+    //   else html_elem.scrollTop += 2px
+    // }, 20); // change by 2px every 20ms, about 50 frames per second
   }
 
   toggleSubNavItem(target) {
