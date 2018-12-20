@@ -41,7 +41,6 @@ class SubNav {
 
   _bindEvents() {
     this.subNavItems.forEach(item => {
-
       item.addEventListener("click", (e) => {
         e.preventDefault();
         this.scrollToSection(item.getAttribute('data-sub-nav-item'))
@@ -122,7 +121,7 @@ class ScrollListener {
   }
 }
 
-  const app_container = document.querySelector('[data-app-container]');
-  const app = new App(app_container);
+  const appContainer = document.querySelector('[data-app-container]');
+  const app = new App(appContainer);
   const subNav = new SubNav();
   const scrollListener = new ScrollListener();
