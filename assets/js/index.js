@@ -28,7 +28,6 @@ class App {
 }
 
 // SubNav Class
-
 class SubNav {
   constructor() {
     this._init();
@@ -105,7 +104,7 @@ class ScrollListener {
     if (this.positionsArray) {
       const elementPosition = this.positionsArray
         .find(position =>
-          position > scrollPosition || (position + this.positionMap[position].height) > scrollPosition
+          (position + this.positionMap[position].height) > scrollPosition
         );
       const element = this.positionMap[elementPosition];
       const newTarget = element;

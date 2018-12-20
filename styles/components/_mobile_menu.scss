@@ -5,10 +5,10 @@
     transition: transform 0.35s ease-out;
   }
 
-  &__mobile-banner {
+  &__banner {
     @extend .box-shadow;
 
-    &__banner-icon {
+    &__icon {
       height: 1.25rem;
       width: 11.25rem;
     }
