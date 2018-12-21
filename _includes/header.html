@@ -34,13 +34,17 @@
           </a>
         </li>
         <li class="pb1">
-          Github
+          <a href="https://github.com/sanctuarycomputer/basement">
+            Github
+          </a>
         </li>
       </ul>
     </div>
-    <div class="MobileMenu__close-arrow-wrapper self-center m1 pointer" data-mobile-nav-icon>
-      {%- include svgs/up_arrow.html -%}
-    </div>
+    <button type="button" class="self-center" data-mobile-nav-icon>
+      <div class="MobileMenu__close-arrow-wrapper m1 pointer">
+        {%- include svgs/up_arrow.html -%}
+      </div>
+    </button>
   </div>
 
   <div class="MobileMenu__banner fixed flex flex-row justify-between px2 py1 w100 lg:none bg-color-white">
@@ -49,9 +53,11 @@
         {%- include svgs/banner.html -%}
       </div>
     </a>
-    <div class="MobileMenu__banner__hamburger-icon pointer bg-color-white fill-wash-gray" data-mobile-nav-icon>
-      {%- include svgs/nav_icon.html -%}
-    </div>
+    <button type="button" data-mobile-nav-icon>
+      <div class="MobileMenu__banner__hamburger-icon pointer bg-color-white fill-wash-gray">
+        {%- include svgs/nav_icon.html -%}
+      </div>
+    </button>
   </div>
 </div>
 
