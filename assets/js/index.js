@@ -43,7 +43,7 @@ class SubNav {
   }
 
   _init() {
-    this.subNavItems = app.appContainer.querySelectorAll(SubNav.selectors.subNavItem);
+    this.subNavItems = app.appContainer.querySelectorAll(`[${SubNav.selectors.subNavItem}]`);
   }
 
   _bindEvents() {
