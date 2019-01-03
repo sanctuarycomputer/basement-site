@@ -50,7 +50,7 @@ class SubNav {
     this.subNavItems.forEach(item => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
-        this.scrollToSection(item.getAttribute(SubNav.selectors.subNavItem))
+        this.scrollToSection(item.getAttribute('data-sub-nav-item'))
       })
     })
   }
@@ -68,13 +68,13 @@ class SubNav {
     subNavItems
       .forEach(item => $(item).removeClass('bold')) // reset subnav items
     const subNavItem = subNavItems
-      .find(item => item.getAttribute(SubNav.selectors.subNavItem) === target);
+      .find(item => item.getAttribute('data-sub-nav-item') === target);
     if (subNavItem) subNavItem.classList.toggle('bold');
   }
 }
 
 SubNav.selectors = {
-  subNavItem: '[data-sub-nav-item]'
+  subNavItem: 'data-sub-nav-item'
 }
 
 // ScrollListener Class
@@ -87,7 +87,7 @@ class ScrollListener {
 
   intializePositionMap() {
     this.positionsArray = [];
-    this.positionMap = Array.from(document.querySelectorAll(ScrollListener.selectors.section)).reduce((map, element) => {
+    this.positionMap = Array.from(document.querySelectorAll('[data-section]')).reduce((map, element) => {
       map[element.offsetTop] = {
         id: element.getAttribute('id'),
         height: element.scrollHeight
@@ -125,10 +125,6 @@ class ScrollListener {
   updateTargetElement(target) {
     subNav.toggleSubNavItem(target);
   }
-}
-
-ScrollListener.selectors = {
-  section: '[data-section]'
 }
 
 const appContainer = document.querySelector('[data-app-container]');
