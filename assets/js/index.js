@@ -50,17 +50,42 @@ class SubNav {
     this.subNavItems.forEach(item => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
-        this.scrollToSection(item.getAttribute('data-sub-nav-item'))
+        const target = item.getAttribute('data-sub-nav-item')
+        const section = document.getElementById(target);
+
+        this.scrollToSection(section.offsetTop + 10, 500);
       })
     })
   }
 
-  scrollToSection(target) {
-    const section = document.getElementById(target);
-    const html_elem = document.querySelector('body');
-    $('html, body').animate({
-      scrollTop: $(section).offset().top + 20
-    }, 250);
+  scrollToSection(to, duration) {
+    // https://gist.github.com/andjosh/6764939#gistcomment-2047675
+    const element = document.scrollingElement || document.documentElement,
+    start = element.scrollTop,
+    change = to - start,
+    startDate = +new Date(),
+    // t = current time
+    // b = start value
+    // c = change in value
+    // d = duration
+    easeInOutQuad = function(t, b, c, d) {
+       t /= d/2;
+       if (t < 1) return c/2*t*t + b;
+       t--;
+       return -c/2 * (t*(t-2) - 1) + b;
+    },
+    animateScroll = function() {
+       const currentDate = +new Date();
+       const currentTime = currentDate - startDate;
+       element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+       if(currentTime < duration) {
+           requestAnimationFrame(animateScroll);
+       }
+       else {
+           element.scrollTop = to;
+       }
+    };
+    animateScroll();
   }
 
   toggleSubNavItem(target) {
@@ -126,6 +151,19 @@ class ScrollListener {
     subNav.toggleSubNavItem(target);
   }
 }
+
+// utils
+
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d/2;
+	if (t < 1) return c/2*t*t + b;
+	t--;
+	return -c/2 * (t*(t-2) - 1) + b;
+};
 
 const appContainer = document.querySelector('[data-app-container]');
 const app = new App(appContainer);
