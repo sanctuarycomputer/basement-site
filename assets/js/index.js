@@ -53,7 +53,7 @@ class SubNav {
         const target = item.getAttribute('data-sub-nav-item')
         const section = document.getElementById(target);
 
-        this.scrollToSection(section.offsetTop + 10, 500);
+        this.scrollToSection(section.offsetTop, 500);
       })
     })
   }
@@ -91,7 +91,7 @@ class SubNav {
   toggleSubNavItem(target) {
     const subNavItems = Array.from(this.subNavItems)
     subNavItems
-      .forEach(item => $(item).removeClass('bold')) // reset subnav items
+      .forEach(item => item.classList.remove('bold')) // reset subnav items
     const subNavItem = subNavItems
       .find(item => item.getAttribute('data-sub-nav-item') === target);
     if (subNavItem) subNavItem.classList.toggle('bold');
@@ -151,19 +151,6 @@ class ScrollListener {
     subNav.toggleSubNavItem(target);
   }
 }
-
-// utils
-
-//t = current time
-//b = start value
-//c = change in value
-//d = duration
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
-	if (t < 1) return c/2*t*t + b;
-	t--;
-	return -c/2 * (t*(t-2) - 1) + b;
-};
 
 const appContainer = document.querySelector('[data-app-container]');
 const app = new App(appContainer);
