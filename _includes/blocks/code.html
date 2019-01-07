@@ -19,20 +19,16 @@
   {% endif %}
   {% if include.block.code %}
     <div class="CodeBlock__container bg-white p_5">
-      {% case include.block.language %}
-        {% when 'css' %}
-          {% capture language %}
+      {% capture language %}
+        {% case include.block.language %}
+          {% when 'css' %}
             language-css
-          {% endcapture %}
-        {% when 'html' %}
-          {% capture language %}
+          {% when 'html' %}
             language-markup
-          {% endcapture %}
-        {% else %}
-          {% capture language %}
+          {% else %}
             language-markup
-          {% endcapture %}
-      {% endcase %}
+        {% endcase %}
+      {% endcapture %}
       <pre>
         <code class="{{ language }} pre-wrap founders-grotesk-mono font-size-s color-blue">
           {{ include.block.code | xml_escape }}
