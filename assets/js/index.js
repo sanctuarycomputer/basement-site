@@ -105,9 +105,9 @@ SubNav.selectors = {
 // ScrollListener Class
 class ScrollListener {
   constructor(subNav) {
+    this.subNav = subNav;
     this.intializePositionMap();
     this.bindScroll();
-    this.subNav = subNav;
     this.target = null;
   }
 
