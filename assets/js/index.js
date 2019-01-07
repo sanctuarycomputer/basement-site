@@ -104,9 +104,10 @@ SubNav.selectors = {
 
 // ScrollListener Class
 class ScrollListener {
-  constructor() {
+  constructor(subNav) {
     this.intializePositionMap();
     this.bindScroll();
+    this.subNav = subNav;
     this.target = null;
   }
 
@@ -148,11 +149,11 @@ class ScrollListener {
   }
 
   updateTargetElement(target) {
-    subNav.toggleSubNavItem(target);
+    this.subNav.toggleSubNavItem(target);
   }
 }
 
 const appContainer = document.querySelector('[data-app-container]');
 const app = new App(appContainer);
 const subNav = new SubNav();
-const scrollListener = new ScrollListener();
+const scrollListener = new ScrollListener(subNav);
