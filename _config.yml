@@ -32,7 +32,7 @@ github_username:  jekyll
 #    value: ‘flex’
 
 
-hightlighter: rouge
+# hightlighter: rouge
 
 # Build settings
 markdown: kramdown
