@@ -10,7 +10,6 @@
       code: 'npm install basement'
 - title: 'Requirements'
   sub_nav_link: true
-  sub_nav_link: ''
   target_id: 'requirements'
   blocks:
     - body: "Basement is built on top of SASS. It’s styles can be included directly using a static .css file, but we highly reccomend compiling Basment with SASS, as this will allow you to customize it to your liking! Include it in your current SASS pipeline and enjoy!"
