@@ -16,6 +16,18 @@
       title: 'Display'
     - type: 'code_block'
       language: 'css'
+      title: '.inline'
+      tag: 'responsive'
+      code: |
+        display: inline;
+    - type: 'code_block'
+      language: 'css'
+      title: '.inline'
+      tag: 'responsive'
+      code: |
+        display: inline;
+    - type: 'code_block'
+      language: 'css'
       title: '.block'
       tag: 'responsive'
       code: |
@@ -26,6 +38,250 @@
       tag: 'responsive'
       code: |
         display: inline-block;
+    - type: 'code_block'
+      language: 'css'
+      title: '.table'
+      tag: 'responsive'
+      code: |
+        display: table;
+    - type: 'code_block'
+      language: 'css'
+      title: '.table-cell'
+      tag: 'responsive'
+      code: |
+        display: table-cell;
+    - type: 'code_block'
+      language: 'css'
+      title: '.flex'
+      tag: 'responsive'
+      code: |
+        display: flex;
+    - type: 'code_block'
+      language: 'css'
+      title: '.inline-flex'
+      tag: 'responsive'
+      code: |
+        display: inline-flex;
+    - type: 'code_block'
+      language: 'css'
+      title: '.none'
+      tag: 'responsive'
+      code: |
+        display: none;
+    - type: 'small_title'
+      title: 'Position'
+    - type: 'code_block'
+      language: 'css'
+      title: '.absolute'
+      tag: 'responsive'
+      code: |
+        position: absolute;
+    - type: 'code_block'
+      language: 'css'
+      title: '.relative'
+      tag: 'responsive'
+      code: |
+        position: relative;
+    - type: 'code_block'
+      language: 'css'
+      title: '.fixed'
+      tag: 'responsive'
+      code: |
+        position: fixed;
+    - type: 'code_block'
+      language: 'css'
+      title: '.sticky'
+      tag: 'responsive'
+      code: |
+        position: sticky;
+    - type: 'small_title'
+      title: 'Float'
+    - type: 'code_block'
+      title: '.left'
+      tag: 'responsive'
+      code: |
+        float: left;
+    - type: 'code_block'
+      title: '.right'
+      tag: 'responsive'
+      code: |
+        float: right;
+    - type: 'small_title'
+      title: 'Flex'
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-1'
+      code: |
+        flex: 1;
+    - type: 'code_block'
+      language: 'css'
+      tag: 'responsive'
+      title: '.flex-2'
+      code: |
+        flex: 2;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-3'
+      code: |
+        flex: 3;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-row'
+      code: |
+        flex-direction: row;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-col'
+      code: |
+        flex-direction: column;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-row-reverse'
+      code: |
+        flex-direction: row-reverse;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-col-reverse'
+      code: |
+        flex-direction: column-reverse;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-wrap'
+      code: |
+        flex-wrap: wrap;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-nowrap'
+      code: |
+        flex-wrap: nowrap;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-nowrap'
+      code: |
+        flex-wrap: nowrap;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.items-start'
+      code: |
+        align-items: flex-start;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.items-end'
+      code: |
+        align-items: flex-end;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.items-center'
+      code: |
+        align-items: center;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.items-baseline'
+      code: |
+        align-items: baseline;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.items-stretch'
+      code: |
+        align-items: stretch;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-start'
+      code: |
+        justify-content: flex-start;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-end'
+      code: |
+        justify-content: flex-end;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-center'
+      code: |
+        justify-content: center;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-between'
+      code: |
+        justify-content: space-between;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-around'
+      code: |
+        justify-content: space-around;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-evenly'
+      code: |
+        justify-content: space-evenly;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-stretch'
+      code: |
+        justify-content: stretch;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.justify-stretch'
+      code: |
+        justify-content: stretch;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.order-0'
+      code: |
+        order: 0;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.order-1'
+      code: |
+        order: 1;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.order-2'
+      code: |
+        order: 2;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.order-3'
+      code: |
+        order: 3;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.order-first'
+      code: |
+        order: -1;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.order-last'
+      code: |
+        order: 9999;
     - type: 'small_title'
       title: 'Typography'
     - type: 'code_block'
@@ -59,6 +315,12 @@
       tag: 'responsive'
       code: |
         text-align: left;
+    - type: 'code_block'
+      language: 'css'
+      title: '.text-right'
+      tag: 'responsive'
+      code: |
+        text-align: right;
     - type: 'code_block'
       language: 'css'
       title: '.text-center'

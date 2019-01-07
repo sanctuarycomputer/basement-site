@@ -28,6 +28,52 @@
         </div>
     - type: 'code_example'
       implementation: 'float-grid'
+    - type: 'small_title'
+      title: 'Flex Grid'
+    - type: 'light-body-text'
+      body: "The flex grid has the advantage of utilizing flexbox’s alignment properties: align-items and justify-content."
+    - type: 'light-body-text'
+      body: "The implementation is similar to the float grid, however, instead of wrapping the columns in a .clearfix element, we’ll wrap it in a .flex element. Remember that with flex you will have to specifiy the parent’s flex direction if you want the elements to stack differently at different breakpoints. You can also ignore the .col class in the flex grid, as this was responsible for setting the float property, which is no longer neccesary."
+    - type: 'code_block'
+      title: "Implementation"
+      language: 'html'
+      code: |
+        <div class='flex flex-col md:flex-row items-stretch md:items-center mxn2'>
+          <div class='col-12 md:col-6 px2'>
+            <div class="bg-color-light-gray">
+              COL #1
+            </div>
+          </div>
+          <div class='col-12 md:col-3 px2'>
+            <div class="bg-color-light-gray">
+              COL #2
+            </div>
+          </div>
+          <div class='col-12 md:col-3 px2'>
+            <div class="bg-color-light-gray">
+              COL #3
+            </div>
+          </div>
+         </div>
+    - type: 'code_example'
+      implementation: 'flex-grid'
+    - type: 'small_title'
+      title: 'Responsive Classes / Media Queries'
+    - type: 'light-body-text'
+      body: 'All responsive classes can be prefixed with a <breakpoint>: tag. With this prefix applied, the given class will only be applied to the element at the given breakpoint and up.'
+    - type: 'light-body-text'
+      body: 'For example a class of .lg:block applies the block display property to the element at a min-width of breakpoint lg.'
+    - type: 'light-body-text'
+      body: 'Breakpoints are defined in the $breakpoints setting as outlined in settings#breakpoints.'
+    - type: 'code_block'
+      language: 'html'
+      code: |
+        <div class=‘text-left md:text-center’>
+          This text is left justified on mobile and centered from desktop to beyond! 
+        </div>
+        <!-- Resize the viewport to see the responsive classes in action -->
+    - type: 'code_example'
+      implementation: 'responsive-classes'
 - title: 'Helpers'
   target_id: 'helpers'
   sub_nav_link: true
@@ -52,3 +98,25 @@
         </div>
     - type: 'code_example'
       implementation: 'aspect-ratio-helper'
+    - type: 'small_title'
+      title: 'Colors'
+    - type: 'light-body-text'
+      body: 'All colors defined in the $colors setting will have .color-<color>, .bg-color-<color>, and .border-color-<color> classes generated for it'
+    - type: 'light-body-text'
+      body: 'The .color-<color> class is responsible for setting the CSS color property.'
+    - type: 'light-body-text'
+      body: 'The .bg-color-<color> is responsible for setting the CSS background-color property.'
+    - type: 'light-body-text'
+      body: 'The .border-color-<color> is responsible for setting the CSS border-color property.'
+    - type: 'code_block'
+      code: |
+        <div class='bg-color-blue'>
+          <p class='p2 border-color-white color-white'>
+            White text with white border 
+          </p>
+          <p class='p2 border-color-black color-black'>
+            White text with white border 
+          </p> 
+        </div>
+    - type: 'code_example'
+      implementation: 'colors'
