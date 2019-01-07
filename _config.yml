@@ -16,7 +16,7 @@
 title: Basement CSS
 email: dev@santuary.computer
 description: >- # this means to ignore newlines until "baseurl:"
-  Basement CSS is not a framework; rather, a starting point. It is a collection of composable utility classes for building responsive web components. Basement is unopinionated — there are no colors, margins, Cards or Buttons defined here. It is written entirely in Sass, so all settings can be overwritten by simply defining variables in a .scss file. 
+  Basement CSS is not a framework; rather, a starting point. It is a collection of composable utility classes for building responsive web components. Basement is unopinionated — there are no colors, margins, Cards or Buttons defined here. It is written entirely in Sass, so all settings can be overwritten by simply defining variables in a .scss file.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -31,15 +31,20 @@ github_username:  jekyll
 #    property: ‘display’
 #    value: ‘flex’
 
+
+# hightlighter: rouge
+
 # Build settings
 markdown: kramdown
 # theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-babel
 destination: ./_build
 
 sass:
   sass_dir: styles
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

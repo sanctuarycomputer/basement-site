@@ -10,3 +10,17 @@ styling code
   display: block;
   color: grey;
 }
+
+/*
+What input
+*/
+[data-whatintent='mouse'] *:focus {
+  outline: none;
+}
+
+/*
+Manual Resets
+*/
+*:focus {
+  outline-color: grey;
+}

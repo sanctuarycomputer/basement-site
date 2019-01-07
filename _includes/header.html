@@ -1,47 +1,90 @@
+<div class="MobileMenu" data-mobile-menu>
+
+  <div class="MobileMenu__container fixed flex flex-col overflow-hidden w100 lg:none box-shadow bg-color-white">
+    <div class="relative w100 px2 pt4 pb3 bg-color-white">
+
+      <ul class="py1 list-reset founders-grotesk font-size-n color-gray">
+        {%- for item in site.data.header -%}
+          <li class="pb1">
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+              {{ item.title | capitalize }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+    </div>
+    <button type="button" class="self-center" data-mobile-nav-icon>
+      <div class="MobileMenu__close-arrow-wrapper m1 pointer">
+        {%- include svgs/up_arrow.html -%}
+      </div>
+    </button>
+  </div>
+
+  <div class="MobileMenu__banner fixed flex flex-row justify-between px2 py1 w100 lg:none bg-color-white">
+    <a href="/">
+      <div class="MobileMenu__banner__icon fill-wash-gray">
+        {%- include svgs/banner.html -%}
+      </div>
+    </a>
+    <button type="button" data-mobile-nav-icon>
+      <div class="MobileMenu__banner__hamburger-icon pointer bg-color-white fill-wash-gray">
+        {%- include svgs/nav_icon.html -%}
+      </div>
+    </button>
+  </div>
+</div>
+
 <nav class="max-width-4 mxauto pt2 px2">
   <div class="clearfix">
-    <div class="Logo__container col col-7 pt2 pb2">
-      <a href="/">
-        {%- include logo.html -%}
-      </a>
+    <div class="clearfix col col-12 lg:col-7">
+      <div class="Logo__container col col-5 sm:col-3 pt4 lg:pt2 lg:pb2">
+        <a href="/">
+          {%- include logo.html -%}
+        </a>
+      </div>
+      <div class="col col-12 lg:none">
+        <p class="founders-grotesk font-size-n color-gray mt2 bold">
+          {{ page.title | capitalize }}
+        </p>
+      </div>
     </div>
-    <div class="col col-5">
+    <div class="col col-5 none lg:block">
       <ul class="fixed ml2 pt2 list-reset founders-grotesk font-size-n color-gray">
-        <li class="pb1">
-          <a href="/">
-            Introduction
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/getting-started">
-            Getting started
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/settings">
-            Settings
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/class-definitions">
-            Class Defintions
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/sass-utilities">
-            Sass Utilities
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/usescases">
-            Usecases
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/github">
-            Github
-          </a>
-        </li>
+        {%- for item in site.data.header -%}
+          <li class="pb1">
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+              {{ item.title | capitalize }}
+            </a>
+            {% if page.url == item.url %}
+              <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+                {%- for section in site.data[item.data_slug] -%}
+                  {% if section.sub_nav_link %}
+                    {% capture is_last %}
+                      {% if forloop.last %}
+                        pb0
+                      {% else %}
+                        pb_5
+                      {% endif %}
+                    {% endcapture %}
+                    {% capture is_first %}
+                      {% if forloop.first %}
+                        mt1
+                      {% else %}
+                        mt0
+                      {% endif %}
+                    {% endcapture %}
+                    <li class="{{ is_last}}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                      <a href="/#{{ section.target_id }}">
+                        {{ section.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {%- endfor -%}
+              </ul>
+            {% endif %}
+          </li>
+        {%- endfor -%}
       </ul>
     </div>
   </div>

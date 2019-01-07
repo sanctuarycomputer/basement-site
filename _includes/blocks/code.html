@@ -18,10 +18,22 @@
     </p>
   {% endif %}
   {% if include.block.code %}
-    <div class="CodeBlock__container bg-white p1">
-        <code class="language-css founders-grotesk-mono font-size-s color-blue">
+    <div class="CodeBlock__container bg-white p_5">
+      {% capture language %}
+        {% case include.block.language %}
+          {% when 'css' %}
+            language-css
+          {% when 'html' %}
+            language-markup
+          {% else %}
+            language-markup
+        {% endcase %}
+      {% endcapture %}
+      <pre>
+        <code class="{{ language }} pre-wrap founders-grotesk-mono font-size-s color-blue">
           {{ include.block.code | xml_escape }}
         </code>
+      </pre>
     </div>
   {% endif %}
   {% if include.block.note %}

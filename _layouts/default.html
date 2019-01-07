@@ -3,17 +3,28 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body data-app-container>
 
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="clearfix max-width-4 mxauto pt2 px2">
-        <div class="col col-7">
+      <div class="clearfix max-width-4 mxauto pt0 lg:pt2 px2">
+        <div class="col col-12 lg:col-7">
           {{ content }}
         </div>
       </div>
     </main>
+
+    <script src="{{ "/assets/js/index.js" | relative_url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script>
+      Prism.plugins.NormalizeWhitespace.setDefaults({
+        'remove-trailing': true,
+      	'remove-indent': true,
+      	'left-trim': true,
+      	'right-trim': true,
+      });
+    </script>
   </body>
 </html>

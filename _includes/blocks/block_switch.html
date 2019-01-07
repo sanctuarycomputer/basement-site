@@ -1,12 +1,14 @@
 {% case include.type %}
   {% when 'small_title' %}
     {% include blocks/small_title.html block=include.block %}
-  {%  when 'tag_description'%}
+  {%  when 'tag_description' %}
     {% include blocks/tag_description.html block=include.block %}
   {% when 'code_block' %}
     {% include blocks/code.html block=include.block %}
   {% when 'light-body-text' %}
     {% include blocks/light-text.html block=include.block %}
+  {% when 'code_example' %}
+    {% include blocks/code_examples.html block=include.block %}
   {% else %}
     {% include blocks/text.html block=include.block %}
 {% endcase %}

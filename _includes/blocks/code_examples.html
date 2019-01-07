@@ -1,0 +1,46 @@
+<!-- implement as such -->
+<!--
+{% case include.block.implementation %}
+  {% when 'float-grid-implementation' %}
+    <div>
+
+    </div>
+{% endcase %}
+-->
+<p class="font-size-s founders-grotesk color-gray">
+  Result
+</p>
+<div>
+{% case include.block.implementation %}
+  {% when 'float-grid' %}
+    <div class='clearfix mxn1 color-white'>
+      <div class='col col-12 md:col-4 px1'>
+        <div class="bg-color-light-gray py2">
+          COLUMN #1
+        </div>
+      </div>
+      <div class='col col-12 md:col-4 px1'>
+        <div class="bg-color-light-gray py2">
+          COLUMN #2
+        </div>
+      </div>
+      <div class='col col-12 md:col-4 px1'>
+        <div class="bg-color-light-gray py2">
+          COLUMN #3
+        </div>
+      </div>
+      <div class='col off-4 col-8 px1'>
+        <div class="bg-color-light-gray py2 mt1">
+          OFFSET COLUMN
+        </div>
+      </div>
+    </div>
+  {% when 'aspect-ratio-helper' %}
+    <div>
+      <div class="clearfix col-6 aspect-portrait bg-color-light-gray my2">
+      </div>
+      <div class="clearfix col-10 aspect-landscape bg-color-light-gray my2">
+      </div>
+    </div>
+{% endcase %}
+</div>

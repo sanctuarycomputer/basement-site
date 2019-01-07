@@ -1,4 +1,6 @@
 - title: 'Installation'
+  sub_nav_link: true
+  target_id: 'installation'
   blocks:
     - type: 'code_block'
       title: 'yarn'
@@ -7,11 +9,16 @@
       title: 'npm'
       code: 'npm install basement'
 - title: 'Requirements'
+  sub_nav_link: true
+  target_id: 'requirements'
   blocks:
     - body: "Basement is built on top of SASS. It’s styles can be included directly using a static .css file, but we highly reccomend compiling Basment with SASS, as this will allow you to customize it to your liking! Include it in your current SASS pipeline and enjoy!"
 - title: 'Configuration'
+  sub_nav_link: true
+  target_id: 'configuration'
   blocks:
     - body: "All settings in Basement can be overwritten by defining them in a .scss file before Basement is imported."
     - type: 'code_block'
+      language: 'css'
       title: "It's as simple as:"
       code: "@import 'overrides', ‘basement/src/index';"
