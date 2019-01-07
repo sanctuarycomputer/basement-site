@@ -1,6 +1,6 @@
 - title: 'Layout'
   sub_nav_link: true
-  target_id: 'Layout'
+  target_id: 'layout'
   blocks:
     - type: 'small_title'
       title: 'Float Grid'
@@ -29,7 +29,7 @@
     - type: 'code_example'
       implementation: 'float-grid'
 - title: 'Helpers'
-  target_id: 'Helpers'
+  target_id: 'helpers'
   sub_nav_link: true
   blocks:
     - type: 'small_title'

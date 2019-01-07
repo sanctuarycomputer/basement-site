@@ -2,12 +2,12 @@
   sub_nav_link: true
   blocks:
     - body: 'Basement CSS is not a framework; rather, a starting point. It is a collection of composable utility classes for building responsive web components. Basement is unopinionated — there are no colors, margins, Cards or Buttons defined here. It is written entirely in Sass, so all settings can be overwritten by simply defining variables in a .scss file.'
-  target_id: 'introductionExpectations'
+  target_id: 'introduction-expectations'
 - title: 'Philosophy'
   sub_nav_link: true
   blocks:
     - body: 'Semantic mark up. Easy to read and modify. Only have to maintain one file. Fast to write, easy to understand. Not another language, we do not abstract the class names. Easy for developers to pick up.'
-  target_id: 'introductionPhilosophy'
+  target_id: 'introduction-philosophy'
 - title: 'Prior Art'
   target_id: 'prior-art'
   sub_nav_link: true

@@ -1,6 +1,6 @@
 - title: 'Motivation'
   sub_nav_link: true
-  target_id: 'Motivation'
+  target_id: 'motivation'
   blocks:
     - type: 'small_title'
       title: 'SASS Utilities'
@@ -10,7 +10,7 @@
       body: 'That being said, we still wanted the developer to be able reuse the settings they’ve already defined for the Basement framework. We’ve exposed a number of utility functions that can be used in your .scss files to conveniently use these settings.'
 - title: 'Utilities'
   sub_nav_link: true
-  target_id: 'Utilities'
+  target_id: 'utilities'
   blocks:
     - type: 'small_title'
       title: 'Color'
@@ -21,7 +21,7 @@
       code: "color(‘blue’); /* returns #343CCC */"
 - title: 'Mixins'
   sub_nav_link: true
-  target_id: 'Mixins'
+  target_id: 'mixins'
   blocks:
     - type: 'small_title'
       title: 'Media Queries'
