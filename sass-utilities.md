@@ -4,7 +4,7 @@ layout: default
 ---
 <div class="pt2">
 
-  <ul class="list-reset">
+  <ul>
     {%- for section in site.data.sass_utilities -%}
       <li class="clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
         <div class="col col-12 py1 lg:col-3 lg:py0">

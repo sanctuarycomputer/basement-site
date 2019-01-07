@@ -4,7 +4,7 @@ layout: default
 ---
 <div class="GettingStarted lg:pt2">
 
-  <ul class="list-reset">
+  <ul>
     {%- for section in site.data.getting_started -%}
       <li class="GettingStarted__section clearfix founders-grotesk color-gray pb3" data-section id="{{ section.target_id }}">
         <div class="col col-12 py1 lg:col-3 lg:py0">

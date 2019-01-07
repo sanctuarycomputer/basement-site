@@ -104,7 +104,7 @@ SubNav.selectors = {
 
 // ScrollListener Class
 class ScrollListener {
-  constructor(toggleSub) {
+  constructor() {
     this.intializePositionMap();
     this.bindScroll();
     this.target = null;

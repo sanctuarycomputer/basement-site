@@ -4,7 +4,7 @@ layout: default
 ---
 <div class="pt2">
 
-  <ul class="list-reset">
+  <ul>
     {%- for section in site.data.usecases -%}
       <li class="clearfix founders-grotesk color-gray pt2" data-section id="{{ section.target_id }}">
         <div class="col py1 col-12 lg:col-3 lg:py0">

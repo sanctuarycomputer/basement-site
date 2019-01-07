@@ -4,7 +4,7 @@ layout: default
 ---
 <div class="ClassDefinitions pt2">
 
-  <ul class="list-reset">
+  <ul>
     {%- for section in site.data.class_definitions -%}
       <li class="ClassDefinitions__section clearfix founders-grotesk color-gray pt2" data-section id="{{ section.target_id }}">
         <div class="col col-12 py1 lg:col-3 lg:py0">
