@@ -2,43 +2,17 @@
 
   <div class="MobileMenu__container fixed flex flex-col overflow-hidden w100 lg:none box-shadow bg-color-white">
     <div class="relative w100 px2 pt4 pb3 bg-color-white">
+
       <ul class="py1 list-reset founders-grotesk font-size-n color-gray">
-        <li class="pb1">
-          <a href="/" {% if page.url == "/" %}class="bold"{% endif %}>
-            Introduction
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/" {% if page.url == "/getting-started.html" %}class="bold"{% endif %}>
-            Getting Started
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/settings" {% if page.url == "/settings.html" %}class="bold"{% endif %}>
-            Settings
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/class-definitions" {% if page.url == "/class-definitions.html" %}class="bold"{% endif %}>
-            Class Defintions
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/sass-utilities" {% if page.url == "/sass-utilities.html" %}class="bold"{% endif %}>
-            Sass Utilities
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="/usecases" {% if page.url == "/usecases.html" %}class="bold"{% endif %}>
-            Usecases
-          </a>
-        </li>
-        <li class="pb1">
-          <a href="https://github.com/sanctuarycomputer/basement">
-            Github
-          </a>
-        </li>
+        {%- for item in site.data.header -%}
+          <li class="pb1">
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+              {{ item.title | capitalize }}
+            </a>
+          </li>
+        {%- endfor -%}
       </ul>
+
     </div>
     <button type="button" class="self-center" data-mobile-nav-icon>
       <div class="MobileMenu__close-arrow-wrapper m1 pointer">
@@ -70,210 +44,47 @@
         </a>
       </div>
       <div class="col col-12 lg:none">
-        <p class="founders-grotesk font-size-n color-gray mt2 bold capitalize">
-          {{ page.title }}
+        <p class="founders-grotesk font-size-n color-gray mt2 bold">
+          {{ page.title | capitalize }}
         </p>
       </div>
     </div>
     <div class="col col-5 none lg:block">
       <ul class="fixed ml2 pt2 list-reset founders-grotesk font-size-n color-gray">
-        <li class="pb1">
-          <a href="/" {% if page.url == "/" %}class="bold"{% endif %}>
-            Introduction
-          </a>
-          {% if page.url == "/" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
-              {%- for section in site.data.introductions -%}
-                {% if section.sub_nav_link %}
-                  {% capture is_last %}
-                    {% if forloop.last %}
-                      pb0
-                    {% else %}
-                      pb_5
-                    {% endif %}
-                  {% endcapture %}
-                  {% capture is_first %}
-                    {% if forloop.first %}
-                      mt1
-                    {% else %}
-                      mt0
-                    {% endif %}
-                  {% endcapture %}
-                  <li class="{{ is_last}}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
-                    <a href="/#{{ section.target_id }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endif %}
-              {%- endfor -%}
-            </ul>
-          {% endif %}
-        </li>
-        <li class="pb1">
-          <a href="/getting-started" {% if page.url == "/getting-started.html" %}class="bold"{% endif %}>
-            Getting started
-          </a>
-          {% if page.url == "/getting-started.html" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
-              {%- for section in site.data.getting_started -%}
-                {% if section.sub_nav_link %}
-                  {% capture is_last %}
-                    {% if forloop.last %}
-                      pb0
-                    {% else %}
-                      pb_5
-                    {% endif %}
-                  {% endcapture %}
-                  {% capture is_first %}
-                    {% if forloop.first %}
-                      mt1
-                    {% else %}
-                      mt0
-                    {% endif %}
-                  {% endcapture %}
-                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
-                    <a href="/getting-started/#{{ section.target_id }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endif %}
-              {%- endfor -%}
-            </ul>
-          {% endif %}
-        </li>
-        <li class="pb1">
-          <a href="/settings" {% if page.url == "/settings.html" %}class="bold"{% endif %}>
-            Settings
-          </a>
-          {% if page.url == "/settings.html" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
-              {%- for section in site.data.settings -%}
-                {% if section.sub_nav_link %}
-                  {% capture is_last %}
-                    {% if forloop.last %}
-                      pb0
-                    {% else %}
-                      pb_5
-                    {% endif %}
-                  {% endcapture %}
-                  {% capture is_first %}
-                    {% if forloop.first %}
-                      mt1
-                    {% else %}
-                      mt0
-                    {% endif %}
-                  {% endcapture %}
-                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
-                    <a href="/settings/#{{ section.target_id }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endif %}
-              {%- endfor -%}
-            </ul>
-          {% endif %}
-        </li>
-        <li class="pb1">
-          <a href="/class-definitions" {% if page.url == "/class-definitions.html" %}class="bold"{% endif %}>
-            Class Defintions
-          </a>
-          {% if page.url == "/class-definitions.html" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
-              {%- for section in site.data.class_definitions -%}
-                {% if section.sub_nav_link %}
-                  {% capture is_last %}
-                    {% if forloop.last %}
-                      pb0
-                    {% else %}
-                      pb_5
-                    {% endif %}
-                  {% endcapture %}
-                  {% capture is_first %}
-                    {% if forloop.first %}
-                      mt1
-                    {% else %}
-                      mt0
-                    {% endif %}
-                  {% endcapture %}
-                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
-                    <a href="/class-definitions/#{{ section.target_id }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endif %}
-              {%- endfor -%}
-            </ul>
-          {% endif %}
-        </li>
-        <li class="pb1">
-          <a href="/sass-utilities" {% if page.url == "/sass-utilities.html" %}class="bold"{% endif %}>
-            Sass Utilities
-          </a>
-          {% if page.url == "/sass-utilities.html" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
-              {%- for section in site.data.sass_utilities -%}
-                {% if section.sub_nav_link %}
-                  {% capture is_last %}
-                    {% if forloop.last %}
-                      pb0
-                    {% else %}
-                      pb_5
-                    {% endif %}
-                  {% endcapture %}
-                  {% capture is_first %}
-                    {% if forloop.first %}
-                      mt1
-                    {% else %}
-                      mt0
-                    {% endif %}
-                  {% endcapture %}
-                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
-                    <a href="/sass-utilities/#{{ section.target_id }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endif %}
-              {%- endfor -%}
-            </ul>
-          {% endif %}
-        </li>
-        <li class="pb1">
-          <a href="/usecases" {% if page.url == "/usecases.html" %}class="bold"{% endif %}>
-            Usecases
-          </a>
-          {% if page.url == "/usecases.html" %}
-            <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
-              {%- for section in site.data.usecases -%}
-                {% if section.sub_nav_link %}
-                  {% capture is_last %}
-                    {% if forloop.last %}
-                      pb0
-                    {% else %}
-                      pb_5
-                    {% endif %}
-                  {% endcapture %}
-                  {% capture is_first %}
-                    {% if forloop.first %}
-                      mt1
-                    {% else %}
-                      mt0
-                    {% endif %}
-                  {% endcapture %}
-                  <li class="{{ is_last }}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
-                    <a href="/usecases/#{{ section.target_id }}">
-                      {{ section.title }}
-                    </a>
-                  </li>
-                {% endif %}
-              {%- endfor -%}
-            </ul>
-          {% endif %}
-        </li>
-        <li class="pb1">
-          <a href="https://github.com/sanctuarycomputer/basement">
-            Github
-          </a>
-        </li>
+        {%- for item in site.data.header -%}
+          <li class="pb1">
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+              {{ item.title | capitalize }}
+            </a>
+            {% if page.url == item.url %}
+              <ul class="list-style-none founders-grotesk font-size-xs pl_5 border-left border-medium border-white-wash">
+                {%- for section in site.data[item.data_slug] -%}
+                  {% if section.sub_nav_link %}
+                    {% capture is_last %}
+                      {% if forloop.last %}
+                        pb0
+                      {% else %}
+                        pb_5
+                      {% endif %}
+                    {% endcapture %}
+                    {% capture is_first %}
+                      {% if forloop.first %}
+                        mt1
+                      {% else %}
+                        mt0
+                      {% endif %}
+                    {% endcapture %}
+                    <li class="{{ is_last}}{{ is_first }}" data-sub-nav-item="{{ section.target_id }}">
+                      <a href="/#{{ section.target_id }}">
+                        {{ section.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {%- endfor -%}
+              </ul>
+            {% endif %}
+          </li>
+        {%- endfor -%}
       </ul>
     </div>
   </div>

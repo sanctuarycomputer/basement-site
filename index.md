@@ -7,7 +7,7 @@ layout: default
 <div class="Introductions Introductions__container pt2">
 
   <ul class="list-reset">
-    {%- for section in site.data.introductions -%}
+    {%- for section in site.data.introduction -%}
       <li class="Introductions__introduction clearfix founders-grotesk color-gray pt1 lg:pb3" data-section id="{{ section.target_id }}">
         <div class="col col-12 py1 lg:col-3 lg:py0">
           <p class="font-size-xs uppercase color-gray">
