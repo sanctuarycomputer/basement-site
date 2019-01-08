@@ -94,6 +94,46 @@
       tag: 'responsive'
       code: |
         position: sticky;
+    - type: 'code_block'
+      language: 'css'
+      title: '.t0'
+      code: |
+        top: 0;
+    - type: 'code_block'
+      language: 'css'
+      title: '.r0'
+      code: |
+        right: 0;
+    - type: 'code_block'
+      language: 'css'
+      title: '.b0'
+      code: |
+        bottom: 0;
+    - type: 'code_block'
+      language: 'css'
+      title: '.l0'
+      code: |
+        left: 0;
+    - type: 'code_block'
+      language: 'css'
+      title: '.z0'
+      code: |
+        z-index: 0;
+    - type: 'code_block'
+      language: 'css'
+      title: '.z1'
+      code: |
+        z-index: 1;
+    - type: 'code_block'
+      language: 'css'
+      title: '.z2'
+      code: |
+        z-index: 2;
+    - type: 'code_block'
+      language: 'css'
+      title: '.z3'
+      code: |
+        z-index: 3;
     - type: 'small_title'
       title: 'Float'
     - type: 'code_block'
@@ -479,3 +519,112 @@
       title: '.aspect-<ratio>'
       tag: 'dynamic'
       caption: 'This class is used to constrain a child element to a designated aspect ratio. Refer to the usecases section to see it in use.'
+    - type: 'small_title'
+      title: 'Circle'
+    - type: 'code_block'
+      language: 'css'
+      title: '.circle'
+      code: |
+        border-radius: 50%;
+    - type: 'small_title'
+      title: 'Visibility'
+    - type: 'code_block'
+      language: 'css'
+      title: '.hidden'
+      code: |
+        visibility: hidden;
+    - type: 'code_block'
+      language: 'css'
+      title: '.visible'
+      code: |
+        visibility: visible;
+    - type: 'small_title'
+      title: 'Cursor Pointer'
+    - type: 'code_block'
+      language: 'css'
+      title: '.pointer'
+      code: |
+        cursor: pointer;
+    - type: 'code_block'
+      language: 'css'
+      title: '.events-none'
+      code: |
+        pointer-events: none;
+    - type: 'code_block'
+      language: 'css'
+      title: '.events-all'
+      code: |
+        pointer-events: all;
+    - type: 'small_title'
+      title: 'Overlay'
+    - type: 'code_block'
+      language: 'css'
+      title: '.overlay'
+      code: |
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    - type: 'small_title'
+      title: 'Images'
+    - type: 'code_block'
+      language: 'css'
+      title: '.fit-cover'
+      code: |
+        object-fit: cover;
+    - type: 'code_block'
+      language: 'css'
+      title: '.fit-contain'
+      code: |
+        object-fit: contain;
+    - type: 'code_block'
+      language: 'css'
+      title: '.position-top'
+      code: |
+        object-position: top;
+    - type: 'code_block'
+      language: 'css'
+      title: '.position-bottom'
+      code: |
+        object-position: bottom;
+    - type: 'small_title'
+      title: 'Background'
+    - type: 'code_block'
+      language: 'css'
+      title: '.bg-cover'
+      code: |
+        background-size: cover;
+        background-position: center;
+    - type: 'small_title'
+      title: 'Viewport'
+    - type: 'code_block'
+      language: 'css'
+      title: '.vh100'
+      code: |
+        height: 100vh;
+    - type: 'code_block'
+      language: 'css'
+      title: '.100vw'
+      code: |
+        width: 100vw;
+    - type: 'small_title'
+      title: 'Opacity'
+    - type: 'code_block'
+      language: 'css'
+      title: '.opacity-0'
+      code: |
+        opacity: 0;
+    - type: 'code_block'
+      language: 'css'
+      title: '.opacity-1'
+      code: |
+        opacity: 1;
+    - type: 'small_title'
+      title: 'Word Wrap'
+    - type: 'code_block'
+      language: 'css'
+      title: '.break-word'
+      code: |
+        word-wrap: break-word;
+        overflow-wrap: break-word;
