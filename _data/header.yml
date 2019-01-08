@@ -16,6 +16,6 @@
   data_slug: 'sass_utilities'
 - title: 'Usecases'
   url: '/usecases.html'
-  data_slug: 'usescases'
+  data_slug: 'usecases'
 - title: 'Github'
   url: 'https://github.com/sanctuarycomputer/basement'

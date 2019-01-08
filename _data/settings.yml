@@ -4,25 +4,69 @@
     - type: 'small_title'
       title: '$grid-columns'
     - type: 'code_block'
+      language: 'css'
       title: 'Amount of columns in the grid.'
       code: '$grid-columns: 12; /* default */'
     - type: 'small_title'
       title: '$colors'
     - type: 'code_block'
+      language: 'css'
       title: 'Color map used for color-<color>, bg-<color> and border-<color> classes.'
-      code: '$colors: (
-        ‘black’: #000000,
-        ‘white’: #FFFFFF,
-        ‘blue’: #0A3862
-      );'
+      code: |
+        $colors: (
+          ‘black’: #000000,
+          ‘white’: #FFFFFF,
+          ‘blue’: #0A3862
+        );
     - type: 'small_title'
       title: '$breakpoints'
     - type: 'code_block'
       title: 'Media query breakpoints. These will be used to prefix any responsive
 		   classes.'
-      code: '$breakpoints: (
-        ‘sm’: 640px,
-        ‘md’: 832px,
-        ‘lg’: 1024px,
-        ‘xl’: 1152px
-      );'
+      language: 'css'
+      code: |
+        $breakpoints: (
+          ‘sm’: 640px,
+          ‘md’: 832px,
+          ‘lg’: 1024px,
+          ‘xl’: 1152px
+        );
+    - type: 'small_title'
+      title: '$spacing-units'
+    - type: 'code_block'
+      title: "Spacing units defined here will be available in spacing and padding utility classes at each breakpoint. For example, .p_25 will set padding: .25rem; on the selected element. If you update the list of $spacing_units to include 3.125rem, then .sm:mt3_125 will affect the top margin of your element only at small screen sizes."
+      language: 'css'
+      code: |
+        $spacing-units: 0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;
+    - type: 'small_title'
+      title: '$aspect-ratios'
+    - type: 'code_block'
+      title: 'Ratios for .aspect-<ratio> utility class.'
+      language: 'css'
+      code: |
+        $aspect-ratios: (
+          'square': (1, 1),
+          'landscape': (16, 9),
+          'portrait': (2, 3)
+        );
+    - type: 'small_title'
+      title: '$dynamic_spacing'
+    - type: 'code_block'
+      title: 'Whether or not each margin and padding class is generated for each breakpoint.'
+      language: 'css'
+      code: |
+        $dynamic_spacing: true;
+    - type: 'small_title'
+      title: '$decimal_deliminator'
+    - type: 'code_block'
+      title: 'The deliminator used to replace a .'
+      language: 'css'
+      code: |
+        $decimal_deliminator: '_';
+    - type: 'small_title'
+      title: '$dynamic-grid'
+    - type: 'code_block'
+      title: 'Whether or not each col-<i> class is generated for each breakpoint.'
+      language: 'css'
+      code: |
+        $dynamic-grid: true;
