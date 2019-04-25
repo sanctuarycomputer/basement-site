@@ -4,8 +4,8 @@
   "description": "Site for Basement CSS",
   "main": "_build/index.html",
   "scripts": {
-    "start": "yarn install && jekyll serve",
-    "build": "yarn install && jekyll build",
+    "start": "yarn install && bundle exec jekyll serve",
+    "build": "yarn install && bundle exec jekyll build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

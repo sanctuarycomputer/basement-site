@@ -1,0 +1,63 @@
+defaults: &defaults
+  working_directory: ~/repo
+
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.5-node
+    environment:
+      BUNDLE_PATH: ~/repo/vendor/bundle
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-modules-v1-{{ checksum "yarn.lock" }}
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            - rubygems-v1-fallback
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - save_cache:
+          name: Save Ruby Gems Cache
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: npm run build
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: node-modules-v1-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _build 
+
+  deploy:
+    <<: *defaults
+    docker:
+      - image: circleci/python:3.6.3
+    environment:
+      S3_BUCKET_NAME: computer-sanctuary-basement
+      CLOUDFRONT_DISTRO_ID: E1SDGNOHGVCIT0
+    steps:
+      - attach_workspace:
+          at: ./
+      - run: pip install awscli --upgrade --user
+      - run: ~/.local/bin/aws s3 sync ./_build s3://$S3_BUCKET_NAME/ --delete --acl public-read
+      - run: aws configure set preview.cloudfront true
+      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRO_ID --paths '/*'
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: production
