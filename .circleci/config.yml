@@ -47,7 +47,6 @@ jobs:
           at: ./
       - run: pip install awscli --upgrade --user
       - run: ~/.local/bin/aws s3 sync ./_build s3://$S3_BUCKET_NAME/ --delete --acl public-read
-      - run: aws configure set preview.cloudfront true
       - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRO_ID --paths '/*'
 
 workflows:
