@@ -89,11 +89,11 @@
       language: 'html'
       code: |
         <div class='aspect-portrait'>
-          <div style='background-image: url('dots.jpg”)'>
+          <div style='background-image: url('dots.svg”)'>
           </div>
         </div>
         <div class='aspect-landscape'>
-          <div style='background-image': url("stripes.jpg")'>
+          <div style='background-image': url("stripes.svg")'>
           </div>
         </div>
     - type: 'code_example'

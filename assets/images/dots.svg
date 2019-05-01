@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#F0F0F0" fill-rule="nonzero" x="0" y="0" width="600" height="600"></rect>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="0" cy="0.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="200" cy="0.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="200" cy="200.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="200" cy="400.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="200" cy="600.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="400" cy="600.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="400" cy="400.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="400" cy="0.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="600" cy="0.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="600" cy="200.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="600" cy="400.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="600" cy="600.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="400" cy="200.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="0" cy="200.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="0" cy="400.5" rx="53" ry="55.5"></ellipse>
+        <ellipse id="Oval" fill="#1950FF" fill-rule="nonzero" cx="0" cy="600.5" rx="53" ry="55.5"></ellipse>
+    </g>
+</svg>
