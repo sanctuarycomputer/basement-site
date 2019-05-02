@@ -50,8 +50,16 @@ class SubNav {
     this.subNavItems.forEach(item => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
+        
         const target = item.getAttribute('data-sub-nav-item')
         const section = document.getElementById(target);
+        this.subNavItems.forEach((subNavItem) => {
+          if (subNavItem.getAttribute('data-sub-nav-item') === target) {
+            subNavItem.classList.add('bold');
+          } else {
+            subNavItem.classList.remove('bold');
+          }
+        })
 
         this.scrollToSection(section.offsetTop, 500);
       })
@@ -135,10 +143,8 @@ class ScrollListener {
   checkIfNewTarget() {
     const scrollPosition = window.scrollY;
     if (this.positionsArray) {
-      const elementPosition = this.positionsArray
-        .find(position =>
-          (position + this.positionMap[position].height) > scrollPosition
-        );
+      const elementPosition = this.positionsArray.sort((a, b) => b - a)
+        .find(position => position < scrollPosition + (window.innerHeight / 2));
       const element = this.positionMap[elementPosition];
       const newTarget = element;
       if (this.target !== newTarget) {
