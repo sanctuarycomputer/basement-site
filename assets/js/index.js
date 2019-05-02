@@ -13,24 +13,32 @@ class App {
     this.appContainer = container;
     this.mobileNavIcon = this.appContainer.querySelectorAll(App.selectors.dataMobileNavIcon);
     this.mobileNav = this.appContainer.querySelector(App.selectors.dataMobileMenu);
+    this.page = this.appContainer.querySelectorAll(App.selectors.dataPage);
   }
 
   _bindEvents() {
+    this.page.forEach((element) => {
+      element.addEventListener('click', () => this.closeMobileMenu())
+    })
+
     this.mobileNavIcon.forEach(icon => {
-      icon.addEventListener('click', () => {
-        this.toggleMobileMenu();
-      })
+      icon.addEventListener('click', () => this.toggleMobileMenu())
     })
   }
 
   toggleMobileMenu() {
     this.mobileNav.classList.toggle(App.selectors.mobileMenuOpened);
   }
+
+  closeMobileMenu() {
+    this.mobileNav.classList.remove(App.selectors.mobileMenuOpened);
+  }
 }
 
 App.selectors = {
   dataMobileNavIcon: '[data-mobile-nav-icon]',
   dataMobileMenu: '[data-mobile-menu]',
+  dataPage: '[data-page]',
   mobileMenuOpened: 'MobileMenu--opened'
 }
 
