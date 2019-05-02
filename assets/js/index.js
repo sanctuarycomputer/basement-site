@@ -1,6 +1,3 @@
----
----
-
 // Generic App Class
 
 class App {
@@ -14,23 +11,49 @@ class App {
     this.mobileNavIcon = this.appContainer.querySelectorAll(App.selectors.dataMobileNavIcon);
     this.mobileNav = this.appContainer.querySelector(App.selectors.dataMobileMenu);
     this.page = this.appContainer.querySelectorAll(App.selectors.dataPage);
+
+    if (window.innerWidth <= 1024) {
+      this.addMobileMenuEventListener();
+    }
   }
 
   _bindEvents() {
+    window.addEventListener('resize', this.setMobileNavOnMobileView)
+  }
+
+  setMobileNavOnMobileView = () => {
+    if (window.innerWidth > 1024) {
+      this.removeMobileMenuEventListener();
+    } else {
+      this.addMobileMenuEventListener();
+    }
+  }
+
+  addMobileMenuEventListener = () => {
     this.page.forEach((element) => {
-      element.addEventListener('click', () => this.closeMobileMenu())
+      element.addEventListener('click', this.closeMobileMenu)
     })
 
     this.mobileNavIcon.forEach(icon => {
-      icon.addEventListener('click', () => this.toggleMobileMenu())
+      icon.addEventListener('click', this.toggleMobileMenu)
     })
   }
 
-  toggleMobileMenu() {
+  removeMobileMenuEventListener = () => {
+    this.page.forEach((element) => {
+      element.removeEventListener('click', this.closeMobileMenu)
+    })
+
+    this.mobileNavIcon.forEach(icon => {
+      icon.removeEventListener('click', this.toggleMobileMenu)
+    })
+  }
+
+  toggleMobileMenu = () => {
     this.mobileNav.classList.toggle(App.selectors.mobileMenuOpened);
   }
 
-  closeMobileMenu() {
+  closeMobileMenu = () => {
     this.mobileNav.classList.remove(App.selectors.mobileMenuOpened);
   }
 }
