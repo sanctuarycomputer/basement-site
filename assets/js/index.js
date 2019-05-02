@@ -53,15 +53,18 @@ class SubNav {
         
         const target = item.getAttribute('data-sub-nav-item')
         const section = document.getElementById(target);
-        this.subNavItems.forEach((subNavItem) => {
+        let firstSubNavIsSelected = false;
+
+        this.subNavItems.forEach((subNavItem, i) => {
           if (subNavItem.getAttribute('data-sub-nav-item') === target) {
             subNavItem.classList.add('bold');
+            if (i === 0) firstSubNavIsSelected = true;
           } else {
             subNavItem.classList.remove('bold');
           }
         })
-
-        this.scrollToSection(section.offsetTop, 500);
+        const offsetTop = firstSubNavIsSelected ? 0 : section.offsetTop;
+        this.scrollToSection(offsetTop, 500);
       })
     })
   }
