@@ -1,6 +1,3 @@
----
----
-
 // Generic App Class
 
 class App {
@@ -13,18 +10,63 @@ class App {
     this.appContainer = container;
     this.mobileNavIcon = this.appContainer.querySelectorAll(App.selectors.dataMobileNavIcon);
     this.mobileNav = this.appContainer.querySelector(App.selectors.dataMobileMenu);
+    this.pageElements = this.appContainer.children;
+
+    if (window.innerWidth <= 1024) {
+      this.addMobileMenuEventListener();
+    }
   }
 
   _bindEvents() {
+    window.addEventListener('resize', this.setMobileNavOnMobileView)
+  }
+
+  setMobileNavOnMobileView = () => {
+    if (window.innerWidth > 1024) {
+      this.removeMobileMenuEventListener();
+    } else {
+      this.addMobileMenuEventListener();
+    }
+  }
+
+  addMobileMenuEventListener = () => {
+    for (let i = 0; i < this.pageElements.length; i++) {
+      const currentElement = this.pageElements[i];
+      const currentElementIsNotMobileNav = !Object.values(currentElement.attributes)
+        .find((attribute) => attribute.name === 'data-mobile-menu')
+
+      if (currentElement.tagName !== "SCRIPT" && currentElementIsNotMobileNav) {
+        currentElement.addEventListener('click', this.closeMobileMenu)
+      }
+    }
+
     this.mobileNavIcon.forEach(icon => {
-      icon.addEventListener('click', () => {
-        this.toggleMobileMenu();
-      })
+      icon.addEventListener('click', this.toggleMobileMenu)
     })
   }
 
-  toggleMobileMenu() {
+  removeMobileMenuEventListener = () => {
+    for (let i = 0; i < this.pageElements.length; i++) {
+      const currentElement = this.pageElements[i];
+      const currentElementIsNotMobileNav = !Object.values(currentElement.attributes)
+        .find((attribute) => attribute.name === 'data-mobile-menu')
+
+      if (currentElement.tagName !== "SCRIPT" && currentElementIsNotMobileNav) {
+        currentElement.removeEventListener('click', this.closeMobileMenu)
+      }
+    }
+
+    this.mobileNavIcon.forEach(icon => {
+      icon.removeEventListener('click', this.toggleMobileMenu)
+    })
+  }
+
+  toggleMobileMenu = () => {
     this.mobileNav.classList.toggle(App.selectors.mobileMenuOpened);
+  }
+
+  closeMobileMenu = () => {
+    this.mobileNav.classList.remove(App.selectors.mobileMenuOpened);
   }
 }
 
