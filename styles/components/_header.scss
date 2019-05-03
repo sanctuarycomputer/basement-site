@@ -1,0 +1,9 @@
+.Header {
+  &__sanctu-logo {
+    width: 1rem;
+    
+    @media (query(lg-up)) {
+      width: 1.2rem;
+    }
+  }
+}
