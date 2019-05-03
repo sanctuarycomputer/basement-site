@@ -15,59 +15,63 @@
   {% when 'float-grid' %}
     <div class='clearfix mxn1 color-white mb2'>
       <div class='col col-12 md:col-4 px1'>
-        <div class="bg-color-light-gray py2">
+        <div class="bg-color-lighter-gray py2">
           COLUMN #1
         </div>
       </div>
       <div class='col col-12 md:col-4 px1'>
-        <div class="bg-color-light-gray py2">
+        <div class="bg-color-lighter-gray py2">
           COLUMN #2
         </div>
       </div>
       <div class='col col-12 md:col-4 px1'>
-        <div class="bg-color-light-gray py2">
+        <div class="bg-color-lighter-gray py2">
           COLUMN #3
         </div>
       </div>
       <div class='col off-4 col-8 px1'>
-        <div class="bg-color-light-gray py2 mt1">
+        <div class="bg-color-lighter-gray py2 mt1">
           OFFSET COLUMN
         </div>
       </div>
     </div>
   {% when 'aspect-ratio-helper' %}
     <div class="mb2">
-      <div class="clearfix col-6 aspect-portrait bg-color-light-gray my2">
+      <div class="clearfix col-6 aspect-portrait my2">
+        <div style="background-image: url(/assets/images/dots.svg)">
+        </div>
       </div>
-      <div class="clearfix col-10 aspect-landscape bg-color-light-gray my2">
+      <div class="clearfix col-10 aspect-landscape bg-color-grey my2">
+          <div style="background-image: url(/assets/images/stripes.svg)">
+          </div>
       </div>
     </div>
   {% when 'flex-grid' %}
   <div class='flex flex-col md:flex-row items-stretch md:items-center mxn2 mb2'>
     <div class='col-12 md:col-6 px2'>
-      <div class="bg-color-light-gray">
+      <div class="bg-color-lighter-gray">
         COL #1
       </div>
     </div>
     <div class='col-12 md:col-3 px2'>
-      <div class="bg-color-light-gray">
+      <div class="bg-color-lighter-gray">
         COL #2
       </div>
     </div>
     <div class='col-12 md:col-3 px2'>
-      <div class="bg-color-light-gray">
+      <div class="bg-color-lighter-gray">
         COL #3
       </div>
     </div>
-   </div>
+  </div>
   {% when 'colors' %}
-  <div class='bg-color-blue mb2'>
+  <div class='bg-color-blue p2 my2'>
     <p class='p2 border border-small border-color-white color-white'>
       White text with white border 
     </p>
     <p class='p2 border border-small border-color-black color-black'>
       Black text with black border 
-    </p> 
+    </p>
   </div>
   {% when 'responsive-classes' %}
   <div class='text-left md:text-center py2'>
