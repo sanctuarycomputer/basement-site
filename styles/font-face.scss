@@ -1,0 +1,52 @@
+/* FoundersGroteskMono */
+
+@font-face {
+  font-family: 'Founders Grotesk Mono';
+  src: url('/assets/fonts/FoundersGroteskMonoWeb-Regular.eot');
+  src: url('/assets/fonts/FoundersGroteskMonoWeb-Regular.eot?#iefix')
+       format('embedded-opentype'),
+       url('/assets/fonts/FoundersGroteskMonoWeb-Regular.woff2') format('woff2'),
+       url('/assets/fonts/FoundersGroteskMonoWeb-Regular.woff') format('woff');
+}
+
+/* FoundersGroteskText */
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGroteskTextWeb-Regular.eot');
+  src: url('/assets/fonts/FoundersGroteskTextWeb-Regular.eot?#iefix')
+       format('embedded-opentype'),
+       url('/assets/fonts/FoundersGroteskTextWeb-Regular.woff2') format('woff2'),
+       url('/assets/fonts/FoundersGroteskTextWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGroteskTextWeb-RegularItalic.eot');
+  src: url('/assets/fonts/FoundersGroteskTextWeb-RegularItalic.eot?#iefix')
+       format('embedded-opentype'),
+       url('/assets/fonts/FoundersGroteskTextWeb-RegularItalic.woff2') format('woff2'),
+       url('/assets/fonts/FoundersGroteskTextWeb-RegularItalic.woff') format('woff');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGroteskTextWeb-Bold.eot');
+  src: url('/assets/fonts/FoundersGroteskTextWeb-Bold.eot?#iefix')
+       format('embedded-opentype'),
+       url('/assets/fonts/FoundersGroteskTextWeb-Bold.woff2') format('woff2'),
+       url('/assets/fonts/FoundersGroteskTextWeb-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGroteskTextWeb-BoldItalic.eot');
+  src: url('/assets/fonts/FoundersGroteskTextWeb-BoldItalic.eot?#iefix')
+       format('embedded-opentype'),
+       url('/assets/fonts/FoundersGroteskTextWeb-BoldItalic.woff2') format('woff2'),
+       url('/assets/fonts/FoundersGroteskTextWeb-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
