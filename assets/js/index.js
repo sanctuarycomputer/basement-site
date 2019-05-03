@@ -92,31 +92,42 @@ class SubNav {
     this.subNavItems.forEach(item => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
+        
         const target = item.getAttribute('data-sub-nav-item')
         const section = document.getElementById(target);
+        let firstSubNavIsSelected = false;
 
-        this.scrollToSection(section.offsetTop, 500);
+        this.subNavItems.forEach((subNavItem, i) => {
+          if (subNavItem.getAttribute('data-sub-nav-item') === target) {
+            subNavItem.classList.add('bold');
+            if (i === 0) firstSubNavIsSelected = true;
+          } else {
+            subNavItem.classList.remove('bold');
+          }
+        })
+        const offsetTop = firstSubNavIsSelected ? 0 : section.offsetTop;
+        this.scrollToSection(offsetTop, 500);
       })
     })
   }
 
   scrollToSection(to, duration) {
     // https://gist.github.com/andjosh/6764939#gistcomment-2047675
-    const element = document.scrollingElement || document.documentElement,
-    start = element.scrollTop,
-    change = to - start,
-    startDate = +new Date(),
+    const element = document.scrollingElement || document.documentElement;
+    const start = element.scrollTop;
+    const change = to - 80 - start;
+    const startDate = +new Date();
     // t = current time
     // b = start value
     // c = change in value
     // d = duration
-    easeInOutQuad = function(t, b, c, d) {
+    const easeInOutQuad = function(t, b, c, d) {
       t /= d/2;
       if (t < 1) return c/2*t*t + b;
       t--;
       return -c/2 * (t*(t-2) - 1) + b;
-    },
-    animateScroll = function() {
+    };
+    const animateScroll = function() {
       const currentDate = +new Date();
       const currentTime = currentDate - startDate;
       element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
@@ -124,7 +135,7 @@ class SubNav {
         requestAnimationFrame(animateScroll);
       }
       else {
-        element.scrollTop = to;
+        element.scrollTop = to - 80;
       }
     };
     animateScroll();
@@ -177,10 +188,8 @@ class ScrollListener {
   checkIfNewTarget() {
     const scrollPosition = window.scrollY;
     if (this.positionsArray) {
-      const elementPosition = this.positionsArray
-        .find(position =>
-          (position + this.positionMap[position].height) > scrollPosition
-        );
+      const elementPosition = this.positionsArray.sort((a, b) => b - a)
+        .find(position => position < scrollPosition + (window.innerHeight / 2));
       const element = this.positionMap[elementPosition];
       const newTarget = element;
       if (this.target !== newTarget) {
