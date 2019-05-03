@@ -22,12 +22,6 @@
         display: inline;
     - type: 'code_block'
       language: 'css'
-      title: '.inline'
-      tag: 'responsive'
-      code: |
-        display: inline;
-    - type: 'code_block'
-      language: 'css'
       title: '.block'
       tag: 'responsive'
       code: |
@@ -146,6 +140,19 @@
       tag: 'responsive'
       code: |
         float: right;
+    - type: 'code_block'
+      title: '.clearfix::before'
+      tag: 'responsive'
+      code: |
+        content: ' '; 
+        display: table;
+    - type: 'code_block'
+      title: '.clearfix::after'
+      tag: 'responsive'
+      code: |
+        content: ' ';
+        display: table;
+        clear: both;
     - type: 'small_title'
       title: 'Flex'
     - type: 'code_block'
@@ -196,12 +203,6 @@
       title: '.flex-wrap'
       code: |
         flex-wrap: wrap;
-    - type: 'code_block'
-      tag: 'responsive'
-      language: 'css'
-      title: '.flex-nowrap'
-      code: |
-        flex-wrap: nowrap;
     - type: 'code_block'
       tag: 'responsive'
       language: 'css'
@@ -283,9 +284,75 @@
     - type: 'code_block'
       tag: 'responsive'
       language: 'css'
-      title: '.justify-stretch'
+      title: '.self-start'
       code: |
-        justify-content: stretch;
+        align-self: flex-start;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.self-end'
+      code: |
+        align-self: flex-end;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.self-center'
+      code: |
+        align-self: center;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.self-baseline'
+      code: |
+        align-self: baseline;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.self-stretch'
+      code: |
+        align-self: stretch;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.content-start'
+      code: |
+        align-content: flex-start;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.content-end'
+      code: |
+         align-content: flex-end;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.content-center'
+      code: |
+         align-content: center;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.content-between'
+      code: |
+         align-content: space-between;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.content-around'
+      code: |
+         align-content: space-around;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.content-stretch'
+      code: |
+         align-content: stretch;
+    - type: 'code_block'
+      tag: 'responsive'
+      language: 'css'
+      title: '.flex-none'
+      code: |
+         flex: none;
     - type: 'code_block'
       tag: 'responsive'
       language: 'css'
@@ -377,6 +444,12 @@
       title: 'Grid'
     - type: 'code_block'
       language: 'css'
+      title: ".col"
+      tag: 'responsive'
+      code: |
+        float: left;
+    - type: 'code_block'
+      language: 'css'
       title: ".col-<column>"
       tag: "dynamic"
       code: |
@@ -422,7 +495,7 @@
       tag: 'dynamic'
       code: |
         margin-right: <spacing-unit>;
-        margin-left: <spacing-unit>;"
+        margin-left: <spacing-unit>;
     - type: 'code_block'
       language: 'css'
       title: '.my<spacing-unit>'
@@ -597,15 +670,43 @@
         background-size: cover;
         background-position: center;
     - type: 'small_title'
+      title: 'Width / Height'
+    - type: 'code_block'
+      language: 'css'
+      title: '.w100'
+      tag: 'responsive'
+      code: |
+        width: 100%;
+    - type: 'code_block'
+      language: 'css'
+      title: '.h100'
+      tag: 'responsive'
+      code: |
+        height: 100%;
+    - type: 'code_block'
+      language: 'css'
+      title: '.wauto'
+      tag: 'responsive'
+      code: |
+        width: auto;
+    - type: 'code_block'
+      language: 'css'
+      title: '.colhauto'
+      tag: 'responsive'
+      code: |
+        height: auto;
+    - type: 'small_title'
       title: 'Viewport'
     - type: 'code_block'
       language: 'css'
       title: '.vh100'
+      tag: 'responsive'
       code: |
         height: 100vh;
     - type: 'code_block'
       language: 'css'
-      title: '.100vw'
+      title: '.vw100'
+      tag: 'responsive'
       code: |
         width: 100vw;
     - type: 'small_title'
@@ -621,6 +722,48 @@
       code: |
         opacity: 1;
     - type: 'small_title'
+      title: 'Overflow'
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-hidden'
+      code: |
+        overflow: hidden;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-x-hidden'
+      code: |
+        overflow-x: hidden;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-y-hidden'
+      code: |
+        overflow-y: hidden;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-auto'
+      code: |
+        overflow: auto;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-y-scroll'
+      code: |
+        overflow-y: scroll;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-x-scroll'
+      code: |
+        overflow-x: scroll;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-y-auto'
+      code: |
+        overflow-y: auto;
+    - type: 'code_block'
+      language: 'css'
+      title: '.overflow-x-auto'
+      code: |
+        overflow-x: auto;
+    - type: 'small_title'
       title: 'Word Wrap'
     - type: 'code_block'
       language: 'css'
@@ -628,3 +771,53 @@
       code: |
         word-wrap: break-word;
         overflow-wrap: break-word;
+    - type: 'small_title'
+      title: 'White Space'
+    - type: 'code_block'
+      language: 'css'
+      title: '.nowrap'
+      code: |
+        white-space: nowrap;
+    - type: 'small_title'
+      title: 'Text Overflow'
+    - type: 'code_block'
+      language: 'css'
+      title: '.text-overflow-ellipsis'
+      code: |
+        text-overflow: ellipsis;
+    - type: 'code_block'
+      language: 'css'
+      title: '.text-overflow-clip'
+      code: |
+        text-overflow: clip;
+    - type: 'small_title'
+      title: 'Text Decoration'
+    - type: 'code_block'
+      language: 'css'
+      title: '.underline'
+      code: |
+         text-decoration: underline;
+    - type: 'small_title'
+      title: 'Vertical Align'
+    - type: 'code_block'
+      language: 'css'
+      title: '.vertical-align-top'
+      code: |
+         vertical-align: top;
+    - type: 'code_block'
+      language: 'css'
+      title: '.vertical-align-middle'
+      code: |
+         vertical-align: middle;
+    - type: 'code_block'
+      language: 'css'
+      title: '.vertical-align-bottom'
+      code: |
+         vertical-align: bottom;
+    - type: 'small_title'
+      title: 'List Style'
+    - type: 'code_block'
+      language: 'css'
+      title: '.list-style-none'
+      code: |
+         list-style: none;
