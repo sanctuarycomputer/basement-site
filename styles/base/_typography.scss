@@ -21,9 +21,9 @@ $font-size: (
 
 // font families
 .founders-grotesk {
-  font-family: "Founders Grotesk Text Test";
+  font-family: $founders-grotesk;
 }
 
 .founders-grotesk-mono {
-  font-family: "Founders Grotesk Mono Test"
+  font-family: $founders-grotesk-Mono;
 }
