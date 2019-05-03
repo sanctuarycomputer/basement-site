@@ -1,6 +1,6 @@
 <div class="mb2">
   <div class="flex flex-row justify-between items-center py_5">
-    <p class="font-size-s founders-grotesk color-gray">
+    <p class="text-description founders-grotesk color-gray">
       {{ include.block.title | xml_escape }}
     </p>
     {% if include.block.tag %}
@@ -13,7 +13,7 @@
     {% endif %}
   </div>
   {% if include.block.caption %}
-    <p class="block font-size-s founders-grotesk color-light-gray">
+    <p class="block text-description founders-grotesk color-light-gray mb1">
       {{ include.block.caption | xml_escape }}
     </p>
   {% endif %}
@@ -30,15 +30,15 @@
         {% endcase %}
       {% endcapture %}
       <pre>
-        <code class="{{ language }} pre-wrap founders-grotesk-mono font-size-s color-blue">
+        <code class="{{ language }} pre-wrap founders-grotesk-mono text-code color-blue">
           {{ include.block.code | xml_escape }}
         </code>
       </pre>
     </div>
   {% endif %}
   {% if include.block.note %}
-    <p class="font-size-xs line-height-xs founders-grotesk color-light-gray pt1">
-      <span class="bold">Note:</span>
+    <p class="text-note founders-grotesk color-light-gray pt1">
+      Note:
       {{ include.block.note | xml_escape }}
     </p>
   {% endif %}
