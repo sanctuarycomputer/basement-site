@@ -3,7 +3,7 @@
   <div class="MobileMenu__container fixed flex flex-col overflow-hidden w100 lg:none box-shadow bg-color-white">
     <div class="relative w100 px2 pt4 pb3 bg-color-white">
 
-      <ul class="py1 list-reset founders-grotesk nav-title color-gray">
+      <ul class="py1 list-reset founders-grotesk text-nav-title color-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
             <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="col col-5 none lg:block">
-      <ul class="fixed ml2 pt2 list-reset founders-grotesk nav-title color-gray">
+      <ul class="fixed ml2 pt2 list-reset founders-grotesk text-nav-title color-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
             <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
@@ -89,7 +89,7 @@
           </li>
         {%- endfor -%}
       </ul>
-      <a href="https://www.sanctuary.computer/" target="_blank" class="fixed b0 m2 founders-grotesk font-size-xs color-gray none lg:flex flex-row items-center">
+      <a href="https://www.sanctuary.computer/" target="_blank" class="fixed b0 mx2 my1 founders-grotesk font-size-xs color-gray none lg:flex flex-row items-center">
         <img class="Header__sanctu-logo mr_5" src="/assets/images/sanctu_logo.svg" /> 
         Built by Sanctuary Computer
       </a>
