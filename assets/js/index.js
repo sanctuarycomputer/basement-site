@@ -10,7 +10,7 @@ class App {
     this.appContainer = container;
     this.mobileNavIcon = this.appContainer.querySelectorAll(App.selectors.dataMobileNavIcon);
     this.mobileNav = this.appContainer.querySelector(App.selectors.dataMobileMenu);
-    this.page = this.appContainer.querySelectorAll(App.selectors.dataPage);
+    this.pageElements = this.appContainer.children;
 
     if (window.innerWidth <= 1024) {
       this.addMobileMenuEventListener();
@@ -30,9 +30,15 @@ class App {
   }
 
   addMobileMenuEventListener = () => {
-    this.page.forEach((element) => {
-      element.addEventListener('click', this.closeMobileMenu)
-    })
+    for (let i = 0; i < this.pageElements.length; i++) {
+      const currentElement = this.pageElements[i];
+      const currentElementIsNotMobileNav = !Object.values(currentElement.attributes)
+        .find((attribute) => attribute.name === 'data-mobile-menu')
+
+      if (currentElement.tagName !== "SCRIPT" && currentElementIsNotMobileNav) {
+        currentElement.addEventListener('click', this.closeMobileMenu)
+      }
+    }
 
     this.mobileNavIcon.forEach(icon => {
       icon.addEventListener('click', this.toggleMobileMenu)
@@ -40,9 +46,15 @@ class App {
   }
 
   removeMobileMenuEventListener = () => {
-    this.page.forEach((element) => {
-      element.removeEventListener('click', this.closeMobileMenu)
-    })
+    for (let i = 0; i < this.pageElements.length; i++) {
+      const currentElement = this.pageElements[i];
+      const currentElementIsNotMobileNav = !Object.values(currentElement.attributes)
+        .find((attribute) => attribute.name === 'data-mobile-menu')
+
+      if (currentElement.tagName !== "SCRIPT" && currentElementIsNotMobileNav) {
+        currentElement.removeEventListener('click', this.closeMobileMenu)
+      }
+    }
 
     this.mobileNavIcon.forEach(icon => {
       icon.removeEventListener('click', this.toggleMobileMenu)
@@ -61,7 +73,6 @@ class App {
 App.selectors = {
   dataMobileNavIcon: '[data-mobile-nav-icon]',
   dataMobileMenu: '[data-mobile-menu]',
-  dataPage: '[data-page]',
   mobileMenuOpened: 'MobileMenu--opened'
 }
 
