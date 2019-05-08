@@ -1,5 +1,5 @@
 # list of nav items rendered in _includes/header.html
-- title: 'introduction'
+- title: 'Introduction'
   url: '/'
   data_slug: 'introduction'
 - title: 'Getting Started'
