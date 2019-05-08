@@ -144,10 +144,16 @@ class SubNav {
   toggleSubNavItem(target) {
     const subNavItems = Array.from(this.subNavItems)
     subNavItems
-      .forEach(item => item.classList.remove('bold')) // reset subnav items
+      .forEach(item => {
+        item.classList.remove('bold')
+        item.classList.add('menu-hover')
+      }) // reset subnav items
     const subNavItem = subNavItems
       .find(item => item.getAttribute('data-sub-nav-item') === target);
-    if (subNavItem) subNavItem.classList.toggle('bold');
+    if (subNavItem) {
+      subNavItem.classList.toggle('bold');
+      subNavItem.classList.toggle('menu-hover');
+    }
   }
 }
 

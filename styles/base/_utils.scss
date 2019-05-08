@@ -35,3 +35,16 @@
   box-shadow: 2px 3px 6px #00000012;
   border-radius: 0.25rem;
 }
+
+.disable {
+  cursor: unset;
+  pointer-events: none;
+}
+
+.menu-hover {
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: rgb(70, 70, 70);
+  }
+}
