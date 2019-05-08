@@ -1,7 +1,15 @@
+---
+---
+
 // Generic App Class
 
 class App {
   constructor(container) {
+    this.setMobileNavOnMobileView = this.setMobileNavOnMobileView.bind(this);
+    this.addMobileMenuEventListener = this.addMobileMenuEventListener.bind(this);
+    this.removeMobileMenuEventListener = this.removeMobileMenuEventListener.bind(this);
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+    this.closeMobileMenu = this.closeMobileMenu.bind(this);
     this._init(container);
     this._bindEvents();
   }
@@ -21,7 +29,7 @@ class App {
     window.addEventListener('resize', this.setMobileNavOnMobileView)
   }
 
-  setMobileNavOnMobileView = () => {
+  setMobileNavOnMobileView() {
     if (window.innerWidth > 1024) {
       this.removeMobileMenuEventListener();
     } else {
@@ -29,7 +37,7 @@ class App {
     }
   }
 
-  addMobileMenuEventListener = () => {
+  addMobileMenuEventListener() {
     for (let i = 0; i < this.pageElements.length; i++) {
       const currentElement = this.pageElements[i];
       const currentElementIsNotMobileNav = !Object.values(currentElement.attributes)
@@ -45,7 +53,7 @@ class App {
     })
   }
 
-  removeMobileMenuEventListener = () => {
+  removeMobileMenuEventListener() {
     for (let i = 0; i < this.pageElements.length; i++) {
       const currentElement = this.pageElements[i];
       const currentElementIsNotMobileNav = !Object.values(currentElement.attributes)
@@ -61,11 +69,11 @@ class App {
     })
   }
 
-  toggleMobileMenu = () => {
+  toggleMobileMenu() {
     this.mobileNav.classList.toggle(App.selectors.mobileMenuOpened);
   }
 
-  closeMobileMenu = () => {
+  closeMobileMenu() {
     this.mobileNav.classList.remove(App.selectors.mobileMenuOpened);
   }
 }
