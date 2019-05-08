@@ -6,14 +6,16 @@
       <ul class="py1 list-reset founders-grotesk text-nav-title color-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
-            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %} {% if item.title == 'Github' %}target="_blank"{% endif %}>
               {{ item.title }}
             </a>
           </li>
         {%- endfor -%}
       </ul>
-      <a href="https://www.sanctuary.computer/" target="_blank" class="absolute b0 mt6 founders-grotesk font-size-xs color-gray flex flex-row items-center">
-        <img class="Header__sanctu-logo mr_5" src="/assets/images/sanctu_logo.svg" /> 
+      <a href="https://www.sanctuary.computer/" 
+        target="_blank" 
+        class="absolute b0 mt6 founders-grotesk font-size-xs color-gray menu-hover flex flex-row items-center"
+      >
         Built by Sanctuary Computer
       </a>
     </div>
@@ -56,7 +58,7 @@
       <ul class="fixed ml2 pt2 list-reset founders-grotesk text-nav-title color-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
-            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold disable"{% else %}class="menu-hover"{% endif %} {% if item.title == 'Github' %}target="_blank"{% endif %}>
               {{ item.title }}
             </a>
             {% if page.url == item.url %}
@@ -89,8 +91,7 @@
           </li>
         {%- endfor -%}
       </ul>
-      <a href="https://www.sanctuary.computer/" target="_blank" class="fixed b0 mx2 my1 founders-grotesk font-size-xs color-gray none lg:flex flex-row items-center">
-        <img class="Header__sanctu-logo mr_5" src="/assets/images/sanctu_logo.svg" /> 
+      <a href="https://www.sanctuary.computer/" target="_blank" class="fixed b0 mx2 my1 founders-grotesk font-size-xs color-gray menu-hover none lg:flex flex-row items-center">
         Built by Sanctuary Computer
       </a>
     </div>
