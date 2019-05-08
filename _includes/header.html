@@ -6,7 +6,7 @@
       <ul class="py1 list-reset founders-grotesk text-nav-title color-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
-            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %} {% if item.title == 'Github' %}target="_blank"{% endif %}>
               {{ item.title }}
             </a>
           </li>
@@ -58,7 +58,7 @@
       <ul class="fixed ml2 pt2 list-reset founders-grotesk text-nav-title color-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
-            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %}>
+            <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %} {% if item.title == 'Github' %}target="_blank"{% endif %}>
               {{ item.title }}
             </a>
             {% if page.url == item.url %}
