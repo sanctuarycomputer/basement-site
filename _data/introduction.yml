@@ -1,20 +1,30 @@
 - title: 'Expectations'
-  sub_nav_link: true
-  blocks:
-    - body: 'Basement CSS is not a framework; rather, a starting point. It is a collection of composable utility classes for building responsive web components. Basement is unopinionated — there are no colors, margins, Cards or Buttons defined here. It is written entirely in Sass, so all settings can be overwritten by simply defining variables in a .scss file.'
   target_id: 'introduction-expectations'
-- title: 'Philosophy'
   sub_nav_link: true
   blocks:
-    - body: 'Semantic mark up. Easy to read and modify. Only have to maintain one file. Fast to write, easy to understand. Not another language, we do not abstract the class names. Easy for developers to pick up.'
+    - body: Basement CSS is not a framework; rather, a toolkit. It is a collection of composable utility classes for building responsive web components. Basement is unopinionated — there are no colors, margins, .Cards or .Buttons defined here. It is written entirely in Sass, so all settings can be overwritten by simply defining variables in a .scss file.
+- title: 'Configurable'
+  target_id: 'introduction-configurable'
+  sub_nav_link: true
+  blocks:
+    - body: "Basement CSS is intended to be configured to meet the demands of any grid, spacing scale, color palette, and selection of aspect ratios. Class names are designed to avoid collisions so as new spacing units and colors are added, we don't have to make any changes to the existing codebase. For example `.pb2` assigns `padding-bottom: 2rem` to an element, it does not assign `padding-bottom: $spacing-2`. This makes design systems scalable and reduces developer strain :)"
+- title: 'Philosophy'
   target_id: 'introduction-philosophy'
+  sub_nav_link: true
+  blocks:
+    - body: "We wrote Basement CSS with ease of understanding and maintenance in mind. The class names reflect CSS properties as closely as possible. `.flex` assigns `display: flex` to the element; `mt2` assigns `margin-top: 2rem`. There will always be some learning curve, but we think that these generic utility classes allow any developer with an understanding of CSS to jump on a project and visualize the markup without any other domain-specific knowledge."
+- title: 'Components > OO Classes'
+  target_id: 'introduction-components'
+  sub_nav_link: true
+  blocks:
+    - body: While there are no .Card classes here, a codebase will likely still need some sort of reusable Card element. Codebases using Basement still have components `&lt;Card /&gt;` or partials `{{> card }}`, but they will simply compose a number of elements and utility classes. Need to make a styling change to that component? Reach into the component and add or remove a class. Modifications happen in one place, not scattered through a number of .css and template files.
 - title: 'Prior Art'
   target_id: 'prior-art'
   sub_nav_link: true
   blocks:
-    - body: 'We love Bass’ composable philosophy — and stricly obey it — but needed more flexibility. In practice, not all grids are 12 columns, breakpoints are constantly changing, and not all designers adhere to a rigid scale of margin and padding. We also stripped away any opinions regarding typography and decoration and left that up to the user to define.'
+    - body: We love <a class="menu-hover" href="https://basscss.com/" target="_blank">Basscss</a>' composable/atomic philosophy — and strictly obey it — but needed more flexibility. In practice, not all grids are 12 columns, breakpoints are constantly changing, and not all designers adhere to a rigid scale of margin and padding. We also stripped away any opinions regarding typography and decoration and left that up to the user to define.
 - title: 'File Size'
   target_id: 'file-size'
   sub_nav_link: true
   blocks:
-    - body: 'Yes, the file size is large. That’s for a reason! Use Purge CSS if it becomes an issue.'
+    - body: The file size of this framework is large! That's impossible to ignore. The minified .css file, depending on the user's configuration can be anywhere from 40kb - 100kb 😬. The idea is that all utility classes are available at all breakpoints, and the user should, as infrequently as possible, reach out to create a custom class. That means a lot of class definitions! We recommend adding <a class="menu-hover" href="https://github.com/FullHuman/purgecss" target="_blank">purgecss</a>, <a class="menu-hover" href="https://github.com/uncss/uncss" target="_blank">UnCss</a>, or something similar to your build pipeline. You'll find that most Basement classes go unused, so this will reduce the file size significantly.
