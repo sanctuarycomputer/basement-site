@@ -141,18 +141,18 @@
       code: |
         float: right;
     - type: 'code_block'
-      title: '.clearfix::before'
+      title: '.clearfix'
       tag: 'responsive'
       code: |
-        content: ' '; 
-        display: table;
-    - type: 'code_block'
-      title: '.clearfix::after'
-      tag: 'responsive'
-      code: |
-        content: ' ';
-        display: table;
-        clear: both;
+        ::before {
+          content: ' ';
+          display: table;
+        }
+        ::after {
+          content: ' ';
+          display: table;
+          clear: both;
+        }
     - type: 'small_title'
       title: 'Flex'
     - type: 'code_block'
@@ -453,7 +453,7 @@
       title: ".col-<column>"
       tag: "dynamic"
       code: |
-        width: < column > / < total-columns > %;
+        width: <column> / <total-columns> %;
         /* .col-3 = width: 25%; in a 12 column grid */
     - type: 'code_block'
       language: 'css'
@@ -691,7 +691,7 @@
         width: auto;
     - type: 'code_block'
       language: 'css'
-      title: '.colhauto'
+      title: '.hauto'
       tag: 'responsive'
       code: |
         height: auto;
