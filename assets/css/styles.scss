@@ -2,3 +2,7 @@
 ---
 
 @import 'application.scss';
+
+[data-whatintent='mouse'] *:focus {
+  outline: none;
+}
