@@ -48,3 +48,22 @@
     color: rgb(70, 70, 70);
   }
 }
+
+.linked-text {
+  transition: all 0.25s ease;
+  border-bottom: dotted black 1px;
+  
+  &:hover {
+    color: rgb(70, 70, 70);
+  }
+}
+
+.inline-code {
+  @extend .founders-grotesk-mono;
+  color: color('blue');
+  background-color: #f9f9f9;
+  border: solid 1px #e0d8d8;
+  border-radius: 3px;
+  padding: 0 0.1875rem 0.0625rem;
+  line-height: 0.8rem;
+}
