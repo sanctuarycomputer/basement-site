@@ -180,6 +180,7 @@ class ScrollListener {
 
   intializePositionMap() {
     this.positionsArray = [];
+
     this.positionMap = Array.from(document.querySelectorAll('[data-section]')).reduce((map, element) => {
       map[element.offsetTop] = {
         id: element.getAttribute('id'),
@@ -203,7 +204,8 @@ class ScrollListener {
     const scrollPosition = window.scrollY;
     if (this.positionsArray) {
       const elementPosition = this.positionsArray.sort((a, b) => b - a)
-        .find(position => position < scrollPosition + (window.innerHeight / 2));
+        .find(position => position < scrollPosition + (window.innerHeight / 4)) || this.positionsArray[this.positionsArray.length - 1];
+
       const element = this.positionMap[elementPosition];
       const newTarget = element;
       if (this.target !== newTarget) {
