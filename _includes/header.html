@@ -3,7 +3,7 @@
   <div class="MobileMenu__container fixed flex flex-col overflow-hidden w100 lg:none box-shadow bg-color-white">
     <div class="relative w100 px2 pt4 pb3 bg-color-white">
 
-      <ul class="py1 list-reset founders-grotesk text-nav-title color-gray">
+      <ul class="py1 list-reset founders-grotesk text-nav-title color-light-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
             <a href="{{ item.url }}" {% if page.url == item.url %}class="bold"{% endif %} {% if item.title == 'Github' %}target="_blank"{% endif %}>
@@ -14,7 +14,7 @@
       </ul>
       <a href="https://www.sanctuary.computer/" 
         target="_blank" 
-        class="absolute b0 mt6 founders-grotesk font-size-xs color-gray menu-hover flex flex-row items-center"
+        class="absolute b0 mt6 founders-grotesk font-size-xs color-light-gray menu-hover flex flex-row items-center"
       >
         Built by Sanctuary Computer
       </a>
@@ -44,18 +44,18 @@
   <div class="clearfix">
     <div class="clearfix col col-12 lg:col-7">
       <div class="Logo__container col col-5 sm:col-3 pt4 lg:pt2 lg:pb2">
-        <a href="/">
+        <a href="/" aria-label="go to introduction">
           {%- include logo.html -%}
         </a>
       </div>
       <div class="col col-12 lg:none">
-        <p class="founders-grotesk font-size-n color-gray mt2 bold">
+        <p class="founders-grotesk font-size-n color-light-gray mt2 bold">
           {{ page.title | capitalize }}
         </p>
       </div>
     </div>
     <div class="col col-5 none lg:block">
-      <ul class="fixed ml2 pt2 list-reset founders-grotesk text-nav-title color-gray">
+      <ul class="fixed ml2 pt2 list-reset founders-grotesk text-nav-title color-light-gray">
         {%- for item in site.data.header -%}
           <li class="pb1">
             <a href="{{ item.url }}" {% if page.url == item.url %}class="bold disable"{% else %}class="menu-hover"{% endif %} {% if item.title == 'Github' %}target="_blank"{% endif %}>
@@ -91,7 +91,7 @@
           </li>
         {%- endfor -%}
       </ul>
-      <a href="https://www.sanctuary.computer/" target="_blank" class="fixed b0 mx2 my1 founders-grotesk font-size-xs color-gray menu-hover none lg:flex flex-row items-center">
+      <a href="https://www.sanctuary.computer/" target="_blank" class="fixed b0 mx2 my1 founders-grotesk font-size-xs color-light-gray menu-hover none lg:flex flex-row items-center">
         Built by Sanctuary Computer
       </a>
     </div>
