@@ -172,6 +172,12 @@ SubNav.selectors = {
 // ScrollListener Class
 class ScrollListener {
   constructor(subNav) {
+    this.checkIfNewTarget = this.checkIfNewTarget.bind(this);
+    this.bindScroll = this.bindScroll.bind(this);
+    this.intializePositionMap = this.intializePositionMap.bind(this);
+    this.updateTargetElement = this.updateTargetElement.bind(this);
+    
+    this.isScrolling = null;
     this.subNav = subNav;
     this.intializePositionMap();
     this.bindScroll();
@@ -180,6 +186,7 @@ class ScrollListener {
 
   intializePositionMap() {
     this.positionsArray = [];
+
     this.positionMap = Array.from(document.querySelectorAll('[data-section]')).reduce((map, element) => {
       map[element.offsetTop] = {
         id: element.getAttribute('id'),
@@ -192,7 +199,14 @@ class ScrollListener {
 
   bindScroll() {
     this.checkIfNewTarget();
-    document.addEventListener('scroll', this.checkIfNewTarget.bind(this));
+
+    document.addEventListener('scroll', () => {
+      clearTimeout( this.isScrolling );
+        this.isScrolling = setTimeout(() => {
+          this.checkIfNewTarget()
+        }, 60);
+    });
+
     document.addEventListener('resize', () => {
       this.intializePositionMap();
       this.checkIfNewTarget();
@@ -203,7 +217,8 @@ class ScrollListener {
     const scrollPosition = window.scrollY;
     if (this.positionsArray) {
       const elementPosition = this.positionsArray.sort((a, b) => b - a)
-        .find(position => position < scrollPosition + (window.innerHeight / 2));
+        .find(position => position < scrollPosition + (window.innerHeight / 4)) || this.positionsArray[this.positionsArray.length - 1];
+
       const element = this.positionMap[elementPosition];
       const newTarget = element;
       if (this.target !== newTarget) {
