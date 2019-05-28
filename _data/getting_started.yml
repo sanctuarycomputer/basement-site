@@ -4,10 +4,10 @@
   blocks:
     - type: 'code_block'
       title: 'yarn'
-      code: 'yarn add basement'
+      code: 'yarn add @sanctucompu/basement'
     - type: 'code_block'
       title: 'npm'
-      code: 'npm install basement'
+      code: 'npm install @sanctucompu/basement'
 - title: 'Requirements'
   sub_nav_link: true
   target_id: 'requirements'
