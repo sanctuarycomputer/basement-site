@@ -10,7 +10,7 @@ nav_links:
   - title: 'Settings'
     url: '/settings.html'
     data_slug: 'settings'
-  - title: 'Class Defintions'
+  - title: 'Class Definitions'
     url: '/class-definitions.html'
     data_slug: 'class_definitions'
   - title: 'Sass Utilities'
