@@ -34,7 +34,7 @@
     - type: 'small_title'
       title: '$spacing-units'
     - type: 'code_block'
-      title: "Spacing units defined here will be available in spacing and padding utility classes at each breakpoint. For example, .p_25 will set padding: .25rem; on the selected element. If you update the list of $spacing_units to include 3.125rem, then .sm:mt3_125 will affect the top margin of your element only at small screen sizes."
+      title: "Spacing units defined here will be available in spacing and padding utility classes at each breakpoint. For example, .p_25 will set padding: .25rem; on the selected element. If you update the list of $spacing_units to include 3.125rem, then .sm:mt3_125 will affect the top margin of your element only at small screen sizes. Negative margin classes are automatically generated and prefixed with `n`, so `.mn1` will set `margin: -1rem`."
       language: 'css'
       code: |
         $spacing-units: 0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;
